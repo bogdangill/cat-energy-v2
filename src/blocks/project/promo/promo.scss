@@ -1,0 +1,125 @@
+.promo {
+  position: relative;
+  
+  @media (min-width: $screen-xl) {
+    display: flex;
+    align-items: center;
+  }
+}
+  
+.promo__content-wrapper {
+  @media (min-width: $screen-xl) {
+    // flex-basis: 49.99%;
+    width: 42.36%;
+    margin-left: auto;
+  }
+}
+
+.promo__content {
+  @include container();
+  position: relative;
+  color: white;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    color: black;
+    text-align: left;
+    padding-left: 15.63%;
+    padding-right: 15.63%;
+  }
+
+  @media (min-width: $screen-xl) {
+    position: relative;
+    max-width: 415px;
+    padding: 0;
+    margin: 0 auto;
+  }
+}
+
+.promo__title {
+  color: white;
+  padding-top: 8.33%;
+  transition: $transition-time;
+
+  @media (min-width: $screen-md) {
+    color: black;
+    max-width: 415px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 0;
+  }
+}
+
+.promo__uppertext {
+  margin: 7.81% 0;
+  transition: $transition-time;
+}
+
+.promo__image {
+
+  @media (min-width: $screen-xl) {
+    position: absolute;
+    margin: 0;
+    top: -25%;
+    left: 85%;
+    max-width: 38.33vw;
+  }
+}
+
+.promo__background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  z-index: -1;
+
+  @media(min-width: $screen-md) {
+    height: 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    position: relative;
+    height: 690px;
+    flex-basis: 49.99%;
+  }
+}
+
+.promo__btn {
+  padding: .5rem 0;
+  background-color: $green-basic;
+  width: 100%;
+
+  @media(min-width: $screen-md) {
+    position: absolute;
+    top: 37%;
+    left: 15.5vw;
+    max-width: 200px;
+  }
+
+  @media (min-width: $screen-xl) {
+    position: static;
+  }
+}
+
+.promo__bg-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/cat-energy-img/index-bg-desktop.jpg');
+  background-size: cover;
+  background-position: 65%;
+  background-repeat: no-repeat;
+
+  @media (min-width: $screen-xl) {
+    background-position: 0%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include makeFullscaled();
+    background-color: $green-basic;
+    opacity: .85;
+  }
+}

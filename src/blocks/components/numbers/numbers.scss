@@ -1,0 +1,67 @@
+.numbers__row {
+  @include row();
+}
+
+.numbers__col {
+  @include col(xs, 12);
+
+  @media (min-width: $screen-md) {
+    @include col(md, 6);
+  }
+
+  @media (min-width: $screen-xl) {
+    @include col(xl, 12);
+  }
+}
+
+.numbers__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.numbers__item {
+  display: flex;
+  justify-content: center;
+  flex-basis: 44.64%;
+  border: 1px solid $grey-darker;
+  border-radius: 3px;
+  transform: rotateX(180deg);
+}
+
+.numbers__number {
+  font-size: 1.5rem;
+  line-height: 1em;
+  color: black;
+  padding-top: 15px;
+  transform: rotateX(180deg);
+}
+
+.numbers__text {
+  font-size: 13px;
+  line-height: 1em;
+  text-align: center;
+  max-width: 70.16%;
+  transform: rotateX(180deg);
+
+  @media (min-width: $screen-md) {
+    max-width: 84%;
+  }
+}
+
+.numbers__expenses-container {
+  display: flex;
+  justify-content: center;
+  color: black;
+  white-space: pre-wrap;
+  margin: $offset-mobile-y 0;
+
+  @media (min-width: $screen-md) {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    margin-left: auto;
+  }
+}

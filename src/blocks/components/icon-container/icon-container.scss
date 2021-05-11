@@ -1,0 +1,52 @@
+.icon-container {
+  position: relative;
+  background-color: $green-basic;
+
+  &__icon {
+    position: absolute;
+
+    &--slim {
+      bottom: 5%;
+      @include makeSqr(100%);
+    }
+
+    &--pro {
+      max-width: 130%;
+      top: 25%;
+      right: -10%;
+
+      @media (min-width: $screen-md) {
+        width: 268px;
+        max-width: 268px;
+        top: 23%;
+        right: -17%;
+      }
+
+      @media (min-width: $screen-xl) {
+        max-width: 130%;
+        top: 25%;
+        right: -10%;
+      }
+    }
+  }
+
+  &--leaf {
+    background-image: url('../img/cat-energy-img/icon_leaf.svg');
+  }
+
+  &--tub {
+    background-image: url('../img/cat-energy-img/icon_tub.svg');
+  }
+
+  &--eat {
+    background-image: url('../img/cat-energy-img/icon_eat.svg');
+  }
+
+  &--alarm {
+    background-image: url('../img/cat-energy-img/icon_alarm.svg');
+  }
+
+  &--round {
+    border-radius: 100%;
+  }
+}

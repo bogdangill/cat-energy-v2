@@ -1,0 +1,33 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  @include ul-none();
+
+  &__item {
+    @media (min-width: $screen-md) {
+      position: relative;
+
+      &--counter {
+        counter-increment: numb;
+
+        &::after {
+          content: counter(numb);
+          position: absolute;
+          left: 130px;
+          bottom: 0;
+          color: $grey-basic;
+          font-size: 280px;
+          line-height: 280px;
+          z-index: -1;
+        }
+
+        &:first-child {
+
+          &::after {
+            left: 140px;
+          }
+        }
+      }
+    }
+  }
+}
