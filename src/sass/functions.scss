@@ -16,3 +16,44 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+// my mixins
+
+@mixin makeBgCenter($bg-size) {
+  background-size: $bg-size;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+@mixin makeFullscaled() {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin makeSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin makeSqr($sqrSize) {
+  width: $sqrSize;
+  height: $sqrSize;
+}
+
+@mixin makeThumb($width, $height, $bRad, $bgColor) {
+  width: $width;
+  height: $height;
+  border-radius: $bRad;
+  background-color: $bgColor;
+  cursor: pointer;
+}
+
+@mixin makeTrack($height, $bgColor, $bRad, $bColor, $paddY, $paddX) {
+  box-sizing: border-box;
+  height: $height;
+  cursor: pointer;
+  background: $bgColor;
+  border-radius: $bRad;
+  border: 1px solid $bColor;
+  padding: $paddY $paddX;
+}

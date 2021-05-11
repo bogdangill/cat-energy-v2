@@ -6,5 +6,103 @@ block header
   +page-header()
 block content
   main
+    section.promo
+      .promo__content-wrapper
+        .promo__content(id='trigger')
+          h1.title.promo__title Функциональное питание для котов
+          p.uppertext.promo__uppertext Занялся собой? Займись котом!
+          img.promo__image(src='img/cat-energy-img/index-can.png' alt='продукция cat energy pro курица')
+          a.link.btn.promo__btn(href="#") подобрать программу
+      .promo__background
+        .promo__bg-image
+    section.goal
+      h2.title(hidden) Цель
+      ul.list.goal__row
+        li.list__item.goal__col
+          .goal__card.card
+            .icon-container.card__icon-container.icon-container--round
+              img.icon-container__icon.icon-container__icon--slim(src='img/cat-energy-img/cat-slim.svg' alt='худая кошка')
+            h3.title.card__title похудение
+            p.text.card__text
+              | Ваш кот весит больше собаки и почти утратил способность 
+              | лазить по деревьям? Пора на диету! Cat Energy Slim поможет 
+              | вашему питомцу сбросить лишний вес.
+            a.link.uppertext.card__uppertext(href='#') каталог slim
+              img.link__icon(src='img/cat-energy-img/icon-arrow.svg' alt='перейти к каталогу')
+        li.list__item.goal__col
+          .goal__card.card
+            .icon-container.card__icon-container.icon-container--round
+              img.icon-container__icon.icon-container__icon--pro(src='img/cat-energy-img/cat-pro.svg' alt='раскачанная кошка')
+            h3.title.card__title набор массы
+            p.text.card__text 
+              | Заработать авторитет среди дворовых котов и даже собак?
+              | Серия Cat Energy Pro поможет вашему коту нарастить 
+              | необходимые мышцы!
+            a.link.uppertext.card__uppertext(href='#') каталог pro
+              img.link__icon(src='img/cat-energy-img/icon-arrow.svg' alt='перейти к каталогу')
+    section.advantages
+      h2.title.advantages__title Как это работает
+      ol.list.advantages__row
+        li.list__item.list__item--counter.advantages__col
+          .advantages__item
+            .icon-container.advantages__icon-container.icon-container--leaf
+            p.text.advantages__text Функциональное питание содержит только полезные питательные вещества.
+        li.list__item.list__item--counter.advantages__col
+          .advantages__item
+            .icon-container.advantages__icon-container.icon-container--tub
+            p.text.advantages__text Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+        li.list__item.list__item--counter.advantages__col
+          .advantages__item
+            .icon-container.advantages__icon-container.icon-container--eat
+            p.text.advantages__text Замените один-два приема обычной еды на наше функциональное питание.
+        li.list__item.list__item--counter.advantages__col
+          .advantages__item
+            .icon-container.advantages__icon-container.icon-container--alarm
+            p.text.advantages__text Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+    section.demonstration
+      .demonstration__wrapper
+        .demonstration__description
+          h2.title.demonstration__title Живой пример
+          p.text.demonstration__text 
+            | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
+            | обычный корм на Cat Energy Slim. Отличный результат 
+            | без изнуряющих тренировок! При этом он не менял своих 
+            | привычек и по-прежнему спит по 16 часов в день.
+          .numbers.demonstration__numbers
+            .numbers__row
+              .numbers__col
+                .numbers__cards
+                  fieldset.numbers__item
+                    span.uppertext.numbers__number 5 КГ
+                    legend.text.numbers__text снижение веса
+                  fieldset.numbers__item
+                    span.uppertext.numbers__number 60 ДНЕЙ
+                    legend.text.numbers__text затрачено времени
+              .numbers__col 
+                .numbers__expenses-container
+                  span.uppertext Затраты на питание: 
+                  span.uppertext 15 000 РУБ. 
+        .demonstration__interactive
+          .slider
+            .slider__inner
+              .slider__slide-wrapper.slider__slide-wrapper--left-side(style="width: 100%;")
+                .slider__slide.slider__slide--left
+                //- img(src="img/cat-energy-img/cat-fat.png")
+              .slider__slide-wrapper.slider__slide-wrapper--right-side(style="width: 0%;")
+                .slider__slide.slider__slide--right
+                //- img(src="img/cat-energy-img/cat-skinny.png")
+            .slider__control-box
+              span.uppertext.slider__control-text было
+              input.slider__control(type="range" min="0" max="100" value="0" step="100")
+              span.uppertext.slider__control-text стало
+    section.contacts
+      //пусть пока фоновой пикчей будет
+      .contacts__inner
+        p.uppertext.contacts__uppertext приглашаем к сотрудничеству дилеров!
+        .contacts__address
+          p.text.contacts__text ул. Большая Конюшенная, д. 19/8
+          p.text.contacts__text Санкт-Петербург
+      .contacts__map
+        .contacts__balloon
 block footer
   +page-footer()

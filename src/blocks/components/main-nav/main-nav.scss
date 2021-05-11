@@ -11,6 +11,8 @@ $screen-lg:                   992px !default;
 $screen-xl:                   1200px !default;
 $screen-xxl:                  1800px !default;
 
+// @bogdangill: добавил новую переменную для смены сценария отображения меню(настольный вид списка уже на планшете // а не только на десктопе - подгоняю под макет)
+$menu-tablet-width:           $screen-md;
 $menu-desktop-width:          $screen-lg !default;
 $toggler-part-height:         3px !default;
 $toggler-part-bg-color:       #000 !default;
@@ -21,17 +23,28 @@ $transition-time:             0.3s !default;
 
   $block-name:                &; // #{$block-name}__element
 
-  position: relative;
+  text-transform: uppercase;
   z-index: 10;
+
+  @media (min-width: $screen-md) {
+    width: 57.29%;
+    max-width: 480px;
+  }
 
   // первый уровень
   &__list {
+    position: absolute;
+    top: 100%;
+    left: 15px;
     margin: 0;
     padding: 0;
     list-style: none;
 
     // мобильный вид списка
-    @media (max-width: ($menu-desktop-width - 1)) {
+    @media (max-width: ($menu-tablet-width - 1)) {
+
+      color: white;
+      width: 90%;
 
       // открытие/закрытие меню только в случае работающего JS
 
@@ -48,9 +61,11 @@ $transition-time:             0.3s !default;
     }
 
     // настольный вид списка
-    @media (min-width: $menu-desktop-width) {
+    @media (min-width: $menu-tablet-width) {
+      position: static;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
 
       &--lvl-2 {
         display: block;
@@ -60,6 +75,10 @@ $transition-time:             0.3s !default;
         display: block;
       }
     }
+
+    @media (min-width: $screen-xl) {
+      color: white;
+    }
   }
 
   &__item {
@@ -68,33 +87,42 @@ $transition-time:             0.3s !default;
     &--active {
 
       & > #{$block-name}__link {
-        color: #000;
+        opacity: 1;
+        border-bottom: 2px solid white;
+
+        @media (min-width: $screen-md) and (max-width: $screen-xl) {
+          border-bottom-color: $green-basic;
+        }
       }
     }
   }
 
   &__link {
     display: block;
-    padding: 0.5em 1em;
+    color: inherit;
+    line-height: 1em;
+    padding: 10px 0;
     text-decoration: none;
-    background-color: #fff;
 
     &:hover,
     &:focus {
-      text-decoration: none;
-      background-color: $gray-lightest;
+      opacity: .7;
+    }
+
+    &:active {
+      opacity: .3;
     }
 
     &--lvl-2 {
 
-      @media (max-width: ($menu-desktop-width - 1)) {
+      @media (max-width: ($menu-tablet-width - 1)) {
         padding-left: 1.2em;
       }
     }
 
     &--lvl-3 {
 
-      @media (max-width: ($menu-desktop-width - 1)) {
+      @media (max-width: ($menu-tablet-width - 1)) {
         padding-left: 2.4em;
       }
     }
@@ -104,7 +132,7 @@ $transition-time:             0.3s !default;
 
     &--lvl-2 {
 
-      @media (min-width: $menu-desktop-width) {
+      @media (min-width: $menu-tablet-width) {
         position: absolute;
         top: 100%;
         left: 0;
@@ -127,7 +155,7 @@ $transition-time:             0.3s !default;
 
     &--lvl-3 {
 
-      @media (min-width: $menu-desktop-width) {
+      @media (min-width: $menu-tablet-width) {
         position: absolute;
         z-index: 1;
         top: 0;
@@ -154,16 +182,22 @@ $transition-time:             0.3s !default;
   // переключатель
 
   &__toggler {
-    display: inline-block;
     padding: 0;
     background: none;
     border: none;
+
+    &:focus {
+      outline: none;
+      height: 2rem;
+      border: 1px solid $green-basic;
+      border-radius: 5px;
+    }
 
     .no-js & {
       display: none;
     }
 
-    @media (min-width: $menu-desktop-width) {
+    @media (min-width: $menu-tablet-width) {
       display: none;
     }
   }

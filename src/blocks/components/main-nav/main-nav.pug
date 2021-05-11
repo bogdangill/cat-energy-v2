@@ -9,7 +9,7 @@ mixin main-nav(selectedID)
         +main-nav('1')
 
   //- подключаем файл со структурой данных блока
-  include main-nav.data.pug
+  include main-nav.data-custom.pug
 
   nav.main-nav#nav&attributes(attributes)
     +burger('Показать главное меню', 'nav', 'main-nav--open')(class='main-nav__toggler')
