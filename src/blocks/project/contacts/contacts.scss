@@ -1,6 +1,8 @@
+.contacts {
+  position: relative;
+}
+
 .contacts__inner {
-  @include container();
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: $offset-mobile-y;
@@ -9,6 +11,21 @@
   @media (min-width: $screen-md) {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+
+  @media (max-width: $screen-xl) {
+    @include container();
+    display: flex;
+  }
+
+  @media (min-width: $screen-xl) {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    top: 95px;
+    width: 570px;
+    height: 200px;
+    left: 110px;
   }
 }
 

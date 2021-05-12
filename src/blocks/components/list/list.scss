@@ -1,33 +1,38 @@
 .list {
-  display: flex;
-  flex-wrap: wrap;
   @include ul-none();
+}
 
-  &__item {
-    @media (min-width: $screen-md) {
-      position: relative;
+.list__item {
+  margin-bottom: 1.5em;
 
-      &--counter {
-        counter-increment: numb;
+  @media (min-width: $screen-md) {
+    position: relative;
+
+    &--counter {
+      counter-increment: numb;
+      margin-bottom: 4em;
+
+      &::after {
+        content: counter(numb);
+        position: absolute;
+        left: 130px;
+        bottom: 0;
+        color: $grey-basic;
+        font-size: 280px;
+        line-height: 280px;
+        z-index: -1;
+      }
+
+      &:first-child {
 
         &::after {
-          content: counter(numb);
-          position: absolute;
-          left: 130px;
-          bottom: 0;
-          color: $grey-basic;
-          font-size: 280px;
-          line-height: 280px;
-          z-index: -1;
-        }
-
-        &:first-child {
-
-          &::after {
-            left: 140px;
-          }
+          left: 140px;
         }
       }
     }
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 0;
   }
 }

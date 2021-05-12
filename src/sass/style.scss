@@ -1,7 +1,7 @@
 // Style plagin
 @import "variables";
 
-// @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
 
 @import "grid-mixins";
 
@@ -10,27 +10,13 @@
 @import "fonts";
 @import "global";
 
-@import "../blocks/components/btn/btn.scss";
-@import "../blocks/components/burger/burger.scss";
-@import "../blocks/components/main-nav/main-nav.scss";
-@import "../blocks/components/menu/menu.scss";
-@import "../blocks/components/list/list.scss";
-@import "../blocks/components/icon-container/icon-container.scss";
-@import "../blocks/components/card/card.scss";
-@import "../blocks/components/numbers/numbers.scss";
-@import "../blocks/components/slider/slider.scss";
-
-@import "../blocks/project/page-header/page-header";
-@import "../blocks/project/promo/promo.scss";
-@import "../blocks/project/goal/goal.scss";
-@import "../blocks/project/advantages/advantages.scss";
-@import "../blocks/project/demonstration/demonstration.scss";
-@import "../blocks/project/contacts/contacts.scss";
-@import "../blocks/project/page-footer/page-footer";
-
 // ========================== BASIC STYLES =============================== //
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+body {
+    font-weight: 400;
+}
 
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
@@ -49,15 +35,10 @@
 }
 
 .title {
-    font-size: 2.5rem;
     line-height: 1em;
     font-weight: 400;
     margin: 0;
     color: black;
-
-    @media (min-width: $screen-md) {
-        font-size: 3.75rem;
-    }
 }
 
 .text {
@@ -75,6 +56,16 @@
 
 .uppertext {
     text-transform: uppercase;
+
+    @media (min-width: $screen-md) {
+        font-size: 1.25rem;
+    }
+
+    @media (min-width: $screen-xl) {
+        &:last-child {
+            margin: auto;
+        }
+    }
 }
 
 .logo-mobile-text {
@@ -92,6 +83,7 @@ input[type='range'] {
 }
 
 .social {
+    display: flex;
     justify-content: space-between;
     align-items: center;
 
@@ -99,3 +91,21 @@ input[type='range'] {
         fill: none;
     }
 }
+
+@import "../blocks/components/btn/btn.scss";
+@import "../blocks/components/burger/burger.scss";
+@import "../blocks/components/main-nav/main-nav.scss";
+@import "../blocks/components/menu/menu.scss";
+@import "../blocks/components/list/list.scss";
+@import "../blocks/components/icon-container/icon-container.scss";
+@import "../blocks/components/card/card.scss";
+@import "../blocks/components/numbers/numbers.scss";
+@import "../blocks/components/slider/slider.scss";
+
+@import "../blocks/project/page-header/page-header";
+@import "../blocks/project/promo/promo.scss";
+@import "../blocks/project/goal/goal.scss";
+@import "../blocks/project/advantages/advantages.scss";
+@import "../blocks/project/demonstration/demonstration.scss";
+@import "../blocks/project/contacts/contacts.scss";
+@import "../blocks/project/page-footer/page-footer";

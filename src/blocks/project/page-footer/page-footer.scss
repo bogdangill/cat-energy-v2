@@ -4,8 +4,11 @@
 
 .page-footer__wrapper {
   @include container();
-  padding-top: 60px;
-  padding-bottom: 60px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .page-footer__row {
