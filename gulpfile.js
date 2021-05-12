@@ -61,7 +61,7 @@ const style = (done) => {
     .pipe(postcss([
       autoprefixer({
         browsers: [
-          'last 1 versions'
+          'last 4 versions'
         ]
       }),
       mqpacker({

@@ -40,21 +40,21 @@ var controller = document.querySelector('.slider__control');
 var catBefore = document.querySelector('.slider__slide-wrapper--left-side');
 var catAfter = document.querySelector('.slider__slide-wrapper--right-side');
 
-controller.onchange = function() {
-  var catBeforeWidth = parseInt(catBefore.style.width);
-  var catAfterWidth = parseInt(catAfter.style.width);
-
-  if (controller.value > 0) {
-    catAfter.style.width = controller.value + '%';
-    var catBeforeChanged = catBeforeWidth - controller.value;
-    catBefore.style.width = catBeforeChanged + '%';
-  } else {
-    catAfter.style.width = controller.value + '%';
-    var catBeforeChanged = 100;
-    catBefore.style.width = catBeforeChanged + '%';
-  }
+if (window.outerWidth < 768) {
+  controller.setAttribute('value', 100);
+  controller.setAttribute('step', 100);
+} else {
+  controller.setAttribute('value', 50);
+  controller.setAttribute('step', 1);
 }
-// слайдер "было-стало"
+
+catBefore.style.clipPath = 'inset(0 ' + (100 - controller.value) + '%' + ' 0 0)';
+catAfter.style.clipPath = 'inset(0 0 0 ' + controller.value + '%' + ')';
+
+controller.onchange = function() {
+  catBefore.style.clipPath = 'inset(0 ' + (100 - controller.value) + '%' + ' 0 0)';
+  catAfter.style.clipPath = 'inset(0 0 0 ' + controller.value + '%' + ')';
+}
 
 // Если js включен в браузере
 

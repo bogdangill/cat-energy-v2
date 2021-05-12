@@ -87,16 +87,14 @@ block content
         .demonstration__interactive
           .slider
             .slider__inner
-              .slider__slide-wrapper.slider__slide-wrapper--left-side(style="width: 100%;")
+              .slider__slide-wrapper.slider__slide-wrapper--left-side
                 .slider__slide.slider__slide--left
-                //- img(src="img/cat-energy-img/cat-fat.png")
-              .slider__slide-wrapper.slider__slide-wrapper--right-side(style="width: 0%;")
+              .slider__slide-wrapper.slider__slide-wrapper--right-side
                 .slider__slide.slider__slide--right
-                //- img(src="img/cat-energy-img/cat-skinny.png")
             .slider__control-box
-              span.uppertext.slider__control-text было
-              input.slider__control(type="range" min="0" max="100" value="0" step="100")
               span.uppertext.slider__control-text стало
+              input.slider__control(type="range" min="0" max="100" value="50" step="1")
+              span.uppertext.slider__control-text было
     section.contacts
       //пусть пока фоновой пикчей будет
       .container
