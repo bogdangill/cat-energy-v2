@@ -80,8 +80,8 @@ block content
                     legend.text.numbers__text затрачено времени
               .col-12.col-md-6.col-xl-12 
                 .numbers__expenses-container
-                  span.uppertext Затраты на питание: 
-                  span.uppertext 15 000 РУБ. 
+                  span.uppertext.numbers__uppertext Затраты на питание: 
+                  span.uppertext.numbers__uppertext 15 000 РУБ. 
         .demonstration__interactive
           .slider
             .slider__inner
@@ -97,12 +97,18 @@ block content
               span.uppertext.slider__control-text стало
     section.contacts
       //пусть пока фоновой пикчей будет
-      .contacts__inner
-        p.uppertext.contacts__uppertext приглашаем к сотрудничеству дилеров!
-        .contacts__address
-          p.text.contacts__text ул. Большая Конюшенная, д. 19/8
-          p.text.contacts__text Санкт-Петербург
-      .contacts__map
-        .contacts__balloon
+      .container
+        .banner.contacts__banner
+          p.uppertext.banner__uppertext приглашаем к сотрудничеству дилеров!
+          .banner__address
+            p.text.banner__text ул. Большая Конюшенная, д. 19/8
+            p.text.banner__text Санкт-Петербург
+      .map
+        .map__inner
+          .banner.map__banner
+            p.uppertext.banner__uppertext приглашаем к сотрудничеству дилеров!
+            .banner__address
+              p.text.banner__text ул. Большая Конюшенная, д. 19/8
+              p.text.banner__text Санкт-Петербург
 block footer
   +page-footer()

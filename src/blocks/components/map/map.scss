@@ -1,0 +1,29 @@
+.map {
+  @include makeBgCenter(cover);
+  background-position: center;
+  width: 100%;
+  height: 113.13vw;
+  max-height: 400px;
+  background-image: url('../img/cat-energy-img/map.png');
+
+  @media (min-width: $screen-xl) {
+    background-image: url('../img/cat-energy-img/mapxl.png');
+  }
+}
+
+.map__inner {
+  @include container();
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.map__banner {
+  background-color: #fff;
+  width: 570px;
+  
+  @media (max-width: $screen-xl) {
+    display: none;
+  }
+}

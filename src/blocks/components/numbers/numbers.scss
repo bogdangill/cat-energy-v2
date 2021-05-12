@@ -12,8 +12,20 @@
   transform: rotateX(180deg);
 }
 
+.numbers__uppertext {
+  @media (min-width: $screen-md) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: $screen-xl) {
+    &:last-child {
+        margin: auto;
+    }
+}
+}
+
 .numbers__number {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 1em;
   color: black;
   padding-top: 15px;
@@ -37,7 +49,7 @@
   justify-content: center;
   color: black;
   white-space: pre-wrap;
-  margin: $offset-mobile-y 0;
+  margin: 2.5em 0;
 
   &:last-child {
     margin-left: auto;

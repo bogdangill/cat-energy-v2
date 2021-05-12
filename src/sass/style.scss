@@ -14,10 +14,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-body {
-    font-weight: 400;
-}
-
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
 
@@ -56,16 +52,6 @@ body {
 
 .uppertext {
     text-transform: uppercase;
-
-    @media (min-width: $screen-md) {
-        font-size: 1.25rem;
-    }
-
-    @media (min-width: $screen-xl) {
-        &:last-child {
-            margin: auto;
-        }
-    }
 }
 
 .logo-mobile-text {
@@ -101,6 +87,8 @@ input[type='range'] {
 @import "../blocks/components/card/card.scss";
 @import "../blocks/components/numbers/numbers.scss";
 @import "../blocks/components/slider/slider.scss";
+@import "../blocks/components/banner/banner.scss";
+@import "../blocks/components/map/map.scss";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/promo/promo.scss";
