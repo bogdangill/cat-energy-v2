@@ -12,7 +12,7 @@ block content
           h1.title.promo__title Функциональное питание для котов
           p.uppertext.promo__uppertext Занялся собой? Займись котом!
           img.promo__image(src='img/cat-energy-img/index-can.png' alt='продукция cat energy pro курица')
-          a.link.btn.promo__btn(href="#") подобрать программу
+          a.link.btn.btn--primary.promo__btn(href="#") подобрать программу
       .promo__background
         .promo__bg-image
     section.goal
@@ -27,8 +27,9 @@ block content
               | Ваш кот весит больше собаки и почти утратил способность 
               | лазить по деревьям? Пора на диету! Cat Energy Slim поможет 
               | вашему питомцу сбросить лишний вес.
-            a.link.uppertext.card__uppertext(href='#') каталог slim
-              img.link__icon(src='img/cat-energy-img/icon-arrow.svg' alt='перейти к каталогу')
+            a.link.uppertext.card__uppertext(href='#') 
+              .link__text каталог slim
+              .link__icon.link__icon--arrow
         li.list__item.col-12.col-xl
           .goal__card.card
             .icon-container.card__icon-container.icon-container--round
@@ -38,8 +39,9 @@ block content
               | Заработать авторитет среди дворовых котов и даже собак?
               | Серия Cat Energy Pro поможет вашему коту нарастить 
               | необходимые мышцы!
-            a.link.uppertext.card__uppertext(href='#') каталог pro
-              img.link__icon(src='img/cat-energy-img/icon-arrow.svg' alt='перейти к каталогу')
+            a.link.uppertext.card__uppertext(href='#') 
+              .link__text каталог pro
+              .link__icon.link__icon--arrow
     section.advantages
       h2.title.advantages__title Как это работает
       ol.list.row

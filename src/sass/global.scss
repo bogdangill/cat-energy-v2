@@ -103,10 +103,10 @@ textarea {
 svg {
   fill: currentColor;
 
-  a &,
-  button & {
-    pointer-events: none; // Мы любим Edge, это браузер! (почти)
-  }
+  // a &,
+  // button & {
+  //   pointer-events: none; // Мы любим Edge, это браузер! (почти)
+  // }
 
   &:not(:root) {
     overflow: hidden; // Скрыть выступающее за границы в IE

@@ -1,0 +1,33 @@
+.logo {
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .6;
+  }
+}
+
+.logo__icon {
+  display: inline-block;
+  height: 2.85em;
+  width: 2.42em;
+  background-image: url('../img/cat-energy-img/logo-mobile.svg');
+  @include makeBgCenter(contain);
+
+  @media(min-width: $screen-md) {
+    width: 10em;
+    background-image: url('../img/cat-energy-img/logo-tablet.svg');
+  }
+
+  @media(min-width: $screen-lg) {
+    background-image: url('../img/cat-energy-img/logo-desktop.svg');
+  }
+}
+
+.logo__text {
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+}

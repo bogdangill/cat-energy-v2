@@ -46,18 +46,33 @@
     text-decoration: none;
 }
 
-.link__icon {
-    margin-left: 1.3em;
+.link__text {
+    margin-right: 1.3em;
 }
+
+.link__icon--arrow {
+    width: 2.5em;
+    height: 1em;
+    background-image: url('../img/cat-energy-img/icon_arrow.svg');
+    background-repeat: no-repeat;
+    background-position: -70% 50%;
+}
+
+.link__icon {
+    transition: $time;
+}
+
+.link:hover .link__icon--arrow {
+    background-position: 20% 50%;
+}
+
+.link:hover .link__icon--socials {
+    fill: $green-basic;
+}
+
 
 .uppertext {
     text-transform: uppercase;
-}
-
-.logo-mobile-text {
-    @media (min-width: $screen-md) {
-        display: none;
-    }
 }
 
 input[type='range'] {
@@ -72,12 +87,9 @@ input[type='range'] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &__icon {
-        fill: none;
-    }
 }
 
+@import "../blocks/components/logo/logo.scss";
 @import "../blocks/components/btn/btn.scss";
 @import "../blocks/components/burger/burger.scss";
 @import "../blocks/components/main-nav/main-nav.scss";
