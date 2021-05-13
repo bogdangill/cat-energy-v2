@@ -11,20 +11,6 @@
   }
 }
 
-.page-footer__row {
-  @include row();
-}
-
-.page-footer__col {
-  @include col(xs, 12);
-
-  @media (min-width: $screen-md) {
-    @include col(md, 4);
-    display: flex;
-    align-items: center;
-  }
-}
-
 .page-footer__logo-wrapper {
   display: block;
   text-align: center;
@@ -32,6 +18,7 @@
   border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: $screen-md) {
+    text-align: left;
     padding: 0;
     border: none;
   }
