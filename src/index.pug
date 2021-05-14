@@ -18,30 +18,10 @@ block content
     section.goal
       h2.title(hidden) Цель
       ul.list.row
-        li.list__item.col-12.col-xl
-          .goal__card.card
-            .icon-container.card__icon-container.icon-container--round
-              img.icon-container__icon.icon-container__icon--slim(src='img/cat-energy-img/cat-slim.svg' alt='худая кошка')
-            h3.title.card__title похудение
-            p.text.card__text
-              | Ваш кот весит больше собаки и почти утратил способность 
-              | лазить по деревьям? Пора на диету! Cat Energy Slim поможет 
-              | вашему питомцу сбросить лишний вес.
-            a.link.uppertext.card__uppertext(href='#') 
-              .link__text каталог slim
-              .link__icon.link__icon--arrow
-        li.list__item.col-12.col-xl
-          .goal__card.card
-            .icon-container.card__icon-container.icon-container--round
-              img.icon-container__icon.icon-container__icon--pro(src='img/cat-energy-img/cat-pro.svg' alt='раскачанная кошка')
-            h3.title.card__title набор массы
-            p.text.card__text 
-              | Заработать авторитет среди дворовых котов и даже собак?
-              | Серия Cat Energy Pro поможет вашему коту нарастить 
-              | необходимые мышцы!
-            a.link.uppertext.card__uppertext(href='#') 
-              .link__text каталог pro
-              .link__icon.link__icon--arrow
+        include blocks/components/card/card.data.pug
+        each item in cardData
+          li.list__item.col-12.col-xl
+           +card(item.icon_class, item.image, item.caption, item.title, item.description, item.url, item.link_text)
     section.advantages
       h2.title.advantages__title Как это работает
       ol.list.row
@@ -92,9 +72,9 @@ block content
               .slider__slide-wrapper.slider__slide-wrapper--right-side
                 .slider__slide.slider__slide--right
             .slider__control-box
-              span.uppertext.slider__control-text стало
+              span.uppertext.slider__control-text(data-state="after") стало
               input.slider__control(type="range" min="0" max="100" value="50" step="1")
-              span.uppertext.slider__control-text было
+              span.uppertext.slider__control-text(data-state="before") было
     section.contacts
       //пусть пока фоновой пикчей будет
       .container
