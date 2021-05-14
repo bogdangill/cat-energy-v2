@@ -1,9 +1,9 @@
-mixin card(iconClass, img, caption, title, description, url, linkText)
+mixin card(data)
   .goal__card.card
     .icon-container.card__icon-container.icon-container--round
-      img(class='icon-container__icon '+ iconClass +'' src=img alt=caption)
-    h3.title.card__title #{title}
-    p.text.card__text #{description}
-    a.link.uppertext.card__uppertext(href=url) 
-      .link__text #{linkText}
+      img(class='icon-container__icon '+ data.iconClass +'' src=data.img alt=data.caption)
+    h3.title.card__title #{data.title}
+    p.text.card__text #{data.description}
+    a.link.uppertext.card__uppertext(href=data.url) 
+      .link__text #{data.linkText}
       .link__icon.link__icon--arrow

@@ -18,10 +18,26 @@ block content
     section.goal
       h2.title(hidden) Цель
       ul.list.row
-        include blocks/components/card/card.data.pug
-        each item in cardData
-          li.list__item.col-12.col-xl
-            +card(item.icon_class, item.image, item.caption, item.title, item.description, item.url, item.link_text)
+        li.list__item.col-12.col-xl
+          +card({
+            iconClass: "icon-container__icon--slim",
+            img: "img/cat-energy-img/cat-slim.svg",
+            caption: "худая кошка",
+            title: "похудение",
+            description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
+            url: "#",
+            linkText: "каталог slim"
+          })
+        li.list__item.col-12.col-xl
+          +card({
+            iconClass: "icon-container__icon--pro",
+            img: "img/cat-energy-img/cat-pro.svg",
+            caption: "раскачанная кошка",
+            title: "набор массы",
+            description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
+            url: "#",
+            linkText: "каталог pro"
+          })
     section.advantages
       h2.title.advantages__title Как это работает
       ol.list.row
