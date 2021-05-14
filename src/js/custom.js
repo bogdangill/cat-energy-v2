@@ -36,9 +36,10 @@ burger.addEventListener('click', hideElements);
 
 // слайдер "было-стало" (сценарий пока только для мобильника)
 
-var controller = document.querySelector('.slider__control');
-var catBefore = document.querySelector('.slider__slide-wrapper--left-side');
-var catAfter = document.querySelector('.slider__slide-wrapper--right-side');
+const controller = document.querySelector('.slider__control');
+const catBefore = document.querySelector('.slider__slide-wrapper--left-side');
+const catAfter = document.querySelector('.slider__slide-wrapper--right-side');
+const controllButtons = document.querySelectorAll('.slider__control-text');
 
 if (window.outerWidth < 768) {
   controller.setAttribute('value', 100);
@@ -51,9 +52,28 @@ if (window.outerWidth < 768) {
 catBefore.style.clipPath = 'inset(0 ' + (100 - controller.value) + '%' + ' 0 0)';
 catAfter.style.clipPath = 'inset(0 0 0 ' + controller.value + '%' + ')';
 
-controller.onchange = function() {
+controller.addEventListener('change', () => {
+  controller.setAttribute('value', controller.value);
   catBefore.style.clipPath = 'inset(0 ' + (100 - controller.value) + '%' + ' 0 0)';
   catAfter.style.clipPath = 'inset(0 0 0 ' + controller.value + '%' + ')';
+})
+
+for (let controllButton of controllButtons) {
+
+  controllButton.addEventListener('click', () => {
+    switch(controllButton.dataset.state) {
+      case 'before':
+        controller.value = 100;
+        catBefore.style.clipPath = 'inset(0 0 0 0)';
+        catAfter.style.clipPath = 'inset(0 0 0 100%)';
+        break;
+      case 'after':
+        controller.value = 0;
+        catBefore.style.clipPath = 'inset(0 100% 0 0)';
+        catAfter.style.clipPath = 'inset(0 0 0 0)';
+        break;
+    }
+  })
 }
 
 // Если js включен в браузере
