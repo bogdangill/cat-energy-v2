@@ -1,0 +1,32 @@
+.advantage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: $screen-md) {
+    max-width: 250px;
+  }
+}
+
+.advantage__icon-container {
+  @include makeSqr(60px);
+  @include makeBgCenter(50%);
+
+  @media (min-width: $screen-md) {
+    @include makeSqr(80px);
+  }
+}
+
+.advantage__text {
+  flex-basis: 64.29%;
+  flex-grow: 1;
+  margin-left: $offset-mobile;
+  margin-bottom: 0;
+
+  @media (min-width: $screen-md) {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
