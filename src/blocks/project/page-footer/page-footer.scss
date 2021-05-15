@@ -1,8 +1,12 @@
-.page-footer {
-  background-color: $grey-basic;
+.footer {
+  background-color: #F2F2F2;
 }
 
-.page-footer__wrapper {
+.footer__top {
+  background-color: #fff;
+}
+
+.footer__bottom {
   @include container();
 
   @media (min-width: $screen-md) {
@@ -11,7 +15,13 @@
   }
 }
 
-.page-footer__logo-wrapper {
+.footer__contacts {
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+}
+
+.footer__logo-wrapper {
   display: block;
   text-align: center;
   padding: 30px 0;
@@ -24,7 +34,7 @@
   }
 }
 
-.page-footer__social {
+.footer__social {
   width: 130px;
   padding: 20px 0;
   margin: 0 auto;
@@ -34,7 +44,7 @@
   }
 }
 
-.page-footer__author {
+.footer__author {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +59,7 @@
   }
 }
 
-.page-footer__credits {
+.footer__credits {
   @media (min-width: $screen-md) {
     margin-right: 20px;
   }

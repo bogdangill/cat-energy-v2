@@ -1,0 +1,28 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link__text {
+  margin-right: 1.3em;
+}
+
+.link__icon--arrow {
+  width: 2.5em;
+  height: 1em;
+  background-image: url('../img/cat-energy-img/icon_arrow.svg');
+  background-repeat: no-repeat;
+  background-position: -70% 50%;
+}
+
+.link__icon {
+  transition: $time;
+}
+
+.link:hover .link__icon--arrow {
+  background-position: 20% 50%;
+}
+
+.link:hover .link__icon--socials {
+  fill: $green-basic;
+}

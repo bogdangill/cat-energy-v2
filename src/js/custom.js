@@ -1,9 +1,8 @@
 'use strict';
 
-import './config/jqueryLoad';
+// import './config/jqueryLoad';
 import '../blocks/components/burger/burger.js';
 import '../blocks/components/main-nav/main-nav.js';
-import '@fancyapps/fancybox/dist/jquery.fancybox.min';
 import '../blocks/components/dropdown/dropdown.js';
 
 // Если js включен в браузере

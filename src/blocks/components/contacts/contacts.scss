@@ -1,4 +1,4 @@
-.banner {
+.contacts {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,7 +11,7 @@
   }
 }
 
-.banner__uppertext {
+.contacts__uppertext {
   font-size: 1.1rem;
   line-height: 1.3em;
   color: black;
@@ -30,7 +30,7 @@
   }
 }
 
-.banner__address {
+.contacts__address {
   max-width: 10rem;
   flex-basis: 50%;
   margin-right: calc(6.5% - 20px);
@@ -46,7 +46,7 @@
   }
 }
 
-.banner__text {
+.contacts__text {
   margin-bottom: 0;
 
   @media (min-width: $screen-md) {
