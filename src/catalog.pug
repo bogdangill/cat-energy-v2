@@ -1,0 +1,17 @@
+extends pug/layout.pug
+
+block meta
+  title Главная
+block header
+  +page-header("default", 1)
+block content
+  main
+    section.catalog
+      .catalog__container(id="trigger") 
+        h1.title.catalog__title.title--section Каталог продукции
+        h2.visually-hidden Основная продукция
+      ul.list.catalog__list
+        li
+          +good()
+block footer
+  +page-footer("default")

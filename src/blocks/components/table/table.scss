@@ -1,0 +1,14 @@
+.table {
+  font-family: 'Arial', sans-serif;
+}
+
+.table__row {
+  @media (min-width: $screen-md) {
+    height: 2em;
+    border-bottom: 1px solid #CDCDCD;
+  }
+}
+
+.table__cell:last-child {
+  text-align: right;
+}

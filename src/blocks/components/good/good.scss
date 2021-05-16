@@ -1,0 +1,70 @@
+.good {
+  @media (max-width: $screen-md - 1) {
+    @include container();
+    border-top: 1px solid #EBEBEB;
+  }
+  padding-top: 1.42em;
+
+  @media (min-width: $screen-md) {
+    background-color: $grey-basic;
+    padding: 0 40px 20px;
+  }
+}
+
+.good__img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.good__img {
+  max-width: 60%;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: -2em;
+  }
+}
+
+.good__description {
+  margin-bottom: 1.5em;
+
+  @media (min-width: $screen-md) {
+    margin-top: 160px;
+  }
+}
+
+.good__title {
+  font-size: 1.15rem;
+  line-height: 1.25em;
+  color: #222;
+  text-transform: uppercase;
+  max-width: 75%;
+  margin-bottom: .8em;
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    max-width: 50%;
+  }
+
+  @media (min-width: $screen-md) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.good__btn {
+  font-size: 1.15rem;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 1.3em;
+}
+
+.good__data {
+  font-size: .85rem;
+  line-height: 1.2;
+  width: 100%;
+}

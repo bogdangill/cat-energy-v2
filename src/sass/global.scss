@@ -45,6 +45,7 @@
 }
 
 html {
+  height: 100%; //для прижатия футера к низу
   font-family: sans-serif; // 2
   line-height: 1.15; // 3
   -webkit-text-size-adjust: 100%; // 4
@@ -54,6 +55,7 @@ html {
 }
 
 body {
+  height: 100%; //для прижатия футера к низу
   font: 400 $fz-mobile $font-family;
   line-height: 18px;
   color: $text-color;

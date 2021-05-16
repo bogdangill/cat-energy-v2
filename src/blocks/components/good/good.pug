@@ -1,0 +1,21 @@
+mixin good(img, title, weight, taste, price)
+  .good
+    .row.no-gutters
+      .col-6.col-md-12
+        .good__img-wrapper
+          img(class="good__img" src=img alt=title)
+      .col-6.col-md-12
+        .good__description
+          h3.title.good__title #{title}
+          table.table.good__data
+            tr.table__row.table__row--bordered
+              td.table__cell Масса
+              td.table__cell #{weight}
+            tr.table__row.table__row--bordered
+              td.table__cell Вкус
+              td.table__cell #{taste}
+            tr.table__row.table__row--bordered
+              td.table__cell Цена
+              td.table__cell #{price} Р.
+      .col-12
+        button.btn.good__btn.btn--primary Заказать
