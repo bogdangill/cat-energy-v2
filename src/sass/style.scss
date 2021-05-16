@@ -37,6 +37,14 @@
     color: black;
 }
 
+.title--section {
+    font-size: 2.3rem;
+
+    @media (min-width: $screen-md) {
+        font-size: 3.75rem;
+    }
+}
+
 .text {
     font-family: 'Arial', sans-serif;
 }
@@ -51,6 +59,16 @@ input[type='range'] {
     @media (min-width: $screen-md) {
         width: 430px;
     }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wrapper__inner {
+    flex: 1 0 auto;
 }
 
 .social {
@@ -73,6 +91,8 @@ input[type='range'] {
 @import "../blocks/components/contacts/contacts.scss";
 @import "../blocks/components/map/map.scss";
 @import "../blocks/components/link/link.scss";
+@import "../blocks/components/good/good.scss";
+@import "../blocks/components/table/table.scss";
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/promo/promo.scss";
@@ -81,3 +101,4 @@ input[type='range'] {
 @import "../blocks/project/demonstration/demonstration.scss";
 @import "../blocks/project/contacts/contacts.scss";
 @import "../blocks/project/page-footer/page-footer";
+@import "../blocks/project/catalog/catalog.scss";

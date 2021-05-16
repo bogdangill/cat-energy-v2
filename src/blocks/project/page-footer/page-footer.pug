@@ -1,6 +1,6 @@
-mixin page-footer()
+mixin page-footer(modifier)
   footer.footer
-    .footer__top
+    div(class="footer__top footer__top--"+ modifier +"")
       .container
         .contacts.footer__contacts
           p.uppertext.contacts__uppertext приглашаем к сотрудничеству дилеров!

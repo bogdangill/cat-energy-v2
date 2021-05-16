@@ -1,8 +1,10 @@
-.page-header {
+.header {
   position: relative;
   padding-top: 3.13%;
   padding-bottom: 3.13%;
+}
 
+.header--index {
   @media (min-width: $screen-xl) {
     position: absolute;
     width: 100%;
@@ -10,7 +12,15 @@
   }
 }
 
-.page-header__inner {
+.header--default {
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $screen-md) {
+    border-bottom: none;
+  }
+}
+
+.header__inner {
   @include container();
   display: flex;
   justify-content: space-between;

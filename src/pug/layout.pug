@@ -45,12 +45,14 @@ html(lang='ru')
       title Home
 
   body
-    block header
-      p «шапка»
-    block content
-      p содержимое страницы
-    block footer
-      p «подвал»
+    .wrapper
+      .wrapper__inner
+        block header
+          p «шапка»
+        block content
+          p содержимое страницы
+      block footer
+        p «подвал»
     block page-bottom
       script(src='libs/jquery/dist/jquery.min.js')
       //- script(src='libs/popper.js/dist/umd/popper.min.js')

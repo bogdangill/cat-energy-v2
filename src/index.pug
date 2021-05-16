@@ -3,13 +3,13 @@ extends pug/layout.pug
 block meta
   title Главная
 block header
-  +page-header()
+  +page-header("index", 0)
 block content
   main
     section.promo
       .promo__content-wrapper
         .promo__content(id='trigger')
-          h1.title.promo__title Функциональное питание для котов
+          h1.title.promo__title.title--section Функциональное питание для котов
           p.uppertext.promo__uppertext Занялся собой? Займись котом!
           img.promo__image(src='img/cat-energy-img/index-can.png' alt='продукция cat energy pro курица')
           a.link.btn.btn--primary.promo__btn(href="#") подобрать программу
@@ -39,7 +39,7 @@ block content
             linkText: "каталог pro"
           })
     section.advantages
-      h2.title.advantages__title Как это работает
+      h2.title.advantages__title.title--section Как это работает
       ol.list.row
         include blocks/components/advantage/advantage.data.pug
         each item in advantageData
@@ -48,7 +48,7 @@ block content
     section.demonstration
       .demonstration__wrapper
         .demonstration__description
-          h2.title.demonstration__title Живой пример
+          h2.title.demonstration__title.title--section Живой пример
           p.text.demonstration__text 
             | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
             | обычный корм на Cat Energy Slim. Отличный результат 
@@ -80,4 +80,4 @@ block content
               input.slider__control(type="range" min="0" max="100" value="50" step="1")
               span.uppertext.slider__control-text(data-state="before") было
 block footer
-  +page-footer()
+  +page-footer("index")
