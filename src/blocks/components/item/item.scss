@@ -1,0 +1,142 @@
+.item {
+  @media (max-width: $screen-md - 1) {
+    @include container();
+    border-top: 1px solid #EBEBEB;
+  }
+  padding-top: 1.42em;
+
+  &--good {
+
+    @media (min-width: $screen-md) {
+      background-color: $grey-basic;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 0 35px 20px;
+  }
+
+  &--more {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $screen-md) {
+      min-height: 410px;
+      border: 2px solid #F2F2F2;
+    }
+  }
+}
+
+.item__img-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.item__img {
+
+  &--small {
+    max-width: 60%;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      top: -30px;
+    }
+
+    @media (min-width: $screen-xl) {
+      max-width: 85%;
+    }
+  }
+
+  &--big {
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      top: -55px;
+    }
+
+    @media (max-width: $screen-xl) {
+      max-width: 70%;
+    }
+  }
+
+  &--cross {
+    margin-top: 1.4em;
+    margin-bottom: 2.85em;
+
+    @media (min-width: $screen-md) {
+      margin-top: 80px;
+      margin-bottom: 80px;
+    }
+
+    hr {
+      width: 30px;
+      height: 2px;
+      background-color: #D3D3D3;
+      border: none;
+      margin: 0;
+
+      @media (min-width: $screen-md) {
+        width: 60px;
+      }
+    }
+
+    hr:last-child {
+      transform: rotate(90deg);
+      margin-top: -2px;
+    }
+  }
+}
+
+.item__description {
+  margin-bottom: 1.5em;
+}
+
+.item__description--good {
+  @media (min-width: $screen-md) {
+    margin-top: 160px;
+  }
+}
+
+.item__description--more {
+  text-align: center;
+}
+
+.item__title {
+  font-size: 1.15rem;
+  line-height: 1.25em;
+  color: #222;
+  text-transform: uppercase;
+  margin-bottom: .8em;
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    max-width: 50%;
+  }
+
+  @media (min-width: $screen-md) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.item__title--narrow {
+  max-width: 75%;
+}
+
+.item__btn {
+  font-size: 1.15rem;
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 1.3em;
+}
+
+.item__data {
+  font-size: .85rem;
+  line-height: 1.2;
+  width: 100%;
+}

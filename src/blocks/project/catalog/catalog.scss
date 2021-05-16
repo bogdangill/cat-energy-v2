@@ -13,4 +13,27 @@
 .catalog__title {
   margin-top: .4em;
   margin-bottom: .8em;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 1.5em;
+  }
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog__good {
+  flex-basis: 100%;
+  
+  @media (min-width: $screen-md) {
+    flex-basis: 46%;
+    margin: 4.4em 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    flex-basis: 22%;
+  }
 }

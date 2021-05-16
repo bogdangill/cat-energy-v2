@@ -20,3 +20,17 @@
     color: rgba(255, 255, 255, .3);
   }
 }
+
+.btn--grey {
+  color: #444444;
+  padding: .5rem 0;
+  background-color: $grey-basic;
+
+  &:hover {
+    background-color: #EBEBEB;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, .3);
+  }
+}

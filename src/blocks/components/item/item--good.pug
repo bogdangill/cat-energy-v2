@@ -1,0 +1,21 @@
+mixin item--good(img, modifier = "item__img--small", title, weight, taste, price)
+  .item.item--good
+    .row.no-gutters
+      .col-6.col-md-12
+        .item__img-wrapper
+          img(class="item__img"+" "+modifier+"" src=img alt=title)
+      .col-6.col-md-12
+        .item__description.item__description--good
+          h3.title.item__title.item__title--narrow #{title}
+          table.table.item__data
+            tr.table__row.table__row--bordered
+              td.table__cell Масса
+              td.table__cell #{weight}
+            tr.table__row.table__row--bordered
+              td.table__cell Вкус
+              td.table__cell #{taste}
+            tr.table__row.table__row--bordered
+              td.table__cell Цена
+              td.table__cell #{price}
+      .col-12
+        button.btn.item__btn.btn--primary Заказать
