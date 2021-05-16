@@ -1,5 +1,6 @@
 .list {
   @include ul-none();
+  margin-bottom: 0;
 }
 
 .list__item {
