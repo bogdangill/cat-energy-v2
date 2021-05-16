@@ -22,9 +22,25 @@ $transition-time:             0.3s !default;
 .main-nav {
 
   $block-name:                &; // #{$block-name}__element
-
   text-transform: uppercase;
   z-index: 10;
+
+  &--index {
+    color: white;
+
+    @media (min-width: $screen-md) and (max-width: $screen-xl) {
+      color: black;
+    }
+  }
+
+  &--default {
+    .main-nav__item--active {
+
+      & > #{$block-name}__link {
+        border-bottom-color: $green-basic;
+      }
+    }
+  }
 
   @media (min-width: $screen-md) {
     width: 57.29%;
@@ -43,7 +59,6 @@ $transition-time:             0.3s !default;
     // мобильный вид списка
     @media (max-width: ($menu-tablet-width - 1)) {
 
-      color: white;
       width: 90%;
 
       // открытие/закрытие меню только в случае работающего JS
@@ -74,10 +89,6 @@ $transition-time:             0.3s !default;
       &--lvl-3 {
         display: block;
       }
-    }
-
-    @media (min-width: $screen-xl) {
-      color: white;
     }
   }
 

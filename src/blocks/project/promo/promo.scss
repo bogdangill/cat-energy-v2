@@ -37,13 +37,11 @@
 }
 
 .promo__title {
-  font-size: 2.5rem;
   color: white;
   padding-top: 8.33%;
   transition: $transition-time;
 
   @media (min-width: $screen-md) {
-    font-size: 3.75rem;
     color: black;
     max-width: 415px;
   }

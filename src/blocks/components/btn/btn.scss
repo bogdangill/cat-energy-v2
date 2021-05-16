@@ -1,11 +1,14 @@
 .btn {
+  cursor: pointer;
   display: inline-block;
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+  border: none;
 }
 
 .btn--primary {
+  color: white;
   padding: .5rem 0;
   background-color: $green-basic;
 
