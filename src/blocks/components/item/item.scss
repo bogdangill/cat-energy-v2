@@ -1,11 +1,14 @@
 .item {
-  @media (max-width: $screen-md - 1) {
-    @include container();
-    border-top: 1px solid #EBEBEB;
-  }
   padding-top: 1.42em;
 
   &--good {
+    @include row(0,0,0,0,0,0);
+    
+    @media (max-width: $screen-md - 1) {
+      @include container();
+      display: flex;
+      border-top: 1px solid #EBEBEB;
+    }
 
     @media (min-width: $screen-md) {
       background-color: $grey-basic;
@@ -17,6 +20,12 @@
   }
 
   &--more {
+    @media (max-width: $screen-md - 1) {
+      @include container();
+      border-top: 1px solid #EBEBEB;
+      border-bottom: 1px solid #EBEBEB;
+    }
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,6 +33,21 @@
     @media (min-width: $screen-md) {
       min-height: 410px;
       border: 2px solid #F2F2F2;
+    }
+  }
+
+  &--extra {
+    border-top: 1px solid #CDCDCD;
+    padding: 1em 0 0 0;
+
+    @media (min-width: $screen-md) {
+      padding: 25px 35px 0 35px;
+      border-left: 1px solid #CDCDCD;
+      border-right: 1px solid #CDCDCD;
+
+      &:last-child {
+        border-bottom: 1px solid #CDCDCD;
+      }
     }
   }
 }
@@ -35,6 +59,15 @@
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.item__img-wrapper--good {
+  @include col(xs, 6, 12, 0);
+  margin: auto;
+
+  @media (min-width: $screen-md) {
+    @include col(md, 12, 12, 0);
+  }
 }
 
 .item__img {
@@ -97,13 +130,22 @@
 }
 
 .item__description--good {
+  @include col(xs, 6, 12, 0);
+
   @media (min-width: $screen-md) {
+    @include col(md, 12, 12, 0);
     margin-top: 160px;
   }
 }
 
 .item__description--more {
   text-align: center;
+}
+
+.item__description--extra {
+  @media (min-width: $screen-md) {
+    display: flex;
+  }
 }
 
 .item__title {
@@ -126,6 +168,13 @@
 
 .item__title--narrow {
   max-width: 75%;
+}
+
+.item__title--extra {
+  @media (min-width: $screen-md) {
+    margin-right: 245px;
+    margin-bottom: 0;
+  }
 }
 
 .item__btn {

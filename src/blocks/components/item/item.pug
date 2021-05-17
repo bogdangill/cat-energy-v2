@@ -1,0 +1,37 @@
+mixin item(modifier, img, title, weight, taste, price)
+  -
+    var modTitle = '';
+    if (modifier === 'good') {
+      modTitle = 'item__title--narrow';
+    } else if (modifier === 'extra') {
+      modTitle = 'item__title--extra';
+    }
+  div(class="item item--"+modifier+"")
+    if (typeof(img) !== "undefined" && img)
+      div(class="item__img-wrapper item__img-wrapper--"+modifier+"")
+        if (modifier === "good")
+          if (weight >= 1000)
+            img(class="item__img item__img--big" src=img alt=title)
+          else
+            img(class="item__img item__img--small" src=img alt=title)
+      div(class="item__description item__description--"+modifier+"")
+        if (typeof(title) !== "undefined" && title)
+          h3(class="title item__title "+modTitle+"") #{title}
+        table.table.item__data
+          if (typeof(weight) !== "undefined" && weight)
+            tr.table__row.table__row--bordered
+              td.table__cell Масса
+              td.table__cell #{weight} г
+          if (typeof(taste) !== "undefined" && taste)
+            tr.table__row.table__row--bordered
+              td.table__cell Вкус
+              td.table__cell #{taste}
+          if (typeof(price) !== "undefined" && price)
+            tr.table__row.table__row--bordered
+              td.table__cell Цена
+              td.table__cell #{price}
+          if (modifier === "extra")
+            tr.table__row
+              td.table__cell #{weight}
+              td.table__cell #{price}
+      button.btn.item__btn.btn--primary Заказать
