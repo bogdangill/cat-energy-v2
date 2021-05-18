@@ -1,0 +1,46 @@
+.extra {
+  position: relative;
+  border-top: 2px solid $green-basic;
+  margin-top: 2.8em;
+}
+
+.extra__container {
+  @include container();
+}
+
+.extra__row {
+  @include row();
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    margin-left: 0;
+  }
+}
+
+.extra__title {
+  position: absolute;
+  top: -.7em;
+  font-size: 1.7rem;
+  background-color: #fff;
+  padding: 0 20px;
+
+  @media (min-width: $screen-md) {
+    font-size: 2.25rem;
+  }
+}
+
+.extra__list {
+  margin-top: 2.8em;
+}
+
+.extra__good {
+  border-top: 1px solid #CDCDCD;
+
+  &:last-child {
+    border-bottom: 1px solid #CDCDCD;
+  }
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
+  }
+}

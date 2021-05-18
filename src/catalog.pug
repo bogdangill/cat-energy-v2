@@ -11,10 +11,10 @@ block content
         h1.title.catalog__title.title--section Каталог продукции
         h2.visually-hidden Основная продукция
       ul.list.catalog__list
-        include blocks/components/item/item--good.data.pug
+        include blocks/components/item/item.data.pug
         each item in goodData
           li.catalog__good
-            +item--good(item.img, item.modifier, item.title, item.weight, item.taste, item.price)
+            +item("good", item.img, item.title, item.weight, item.taste, item.price)
         li.catalog__good
           .item.item--more
             .item__img-wrapper
@@ -25,5 +25,13 @@ block content
               h3.title.item__title Показать еще 100500 товаров
               p.text.item__text На самом деле вкусов<br>гораздо больше!
             button.btn.item__btn.btn--grey показать все
+    section.extra
+      .extra__container
+        .extra__row
+          h2.title.extra__title Дополнительные товары
+        ul.list.extra__list
+          each item in extraData
+            li.extra__good
+              +item("extra", undefined, item.title, item.weight, undefined, item.price)
 block footer
   +page-footer("default")

@@ -5,10 +5,35 @@
 .table__row {
   @media (min-width: $screen-md) {
     height: 2em;
+  }
+}
+
+.table__row--bordered {
+  @media (min-width: $screen-md) {
     border-bottom: 1px solid #CDCDCD;
   }
 }
 
 .table__cell:last-child {
   text-align: right;
+}
+
+.table__cell--extra {
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    text-align: right;
+
+    &:last-child {
+      width: 90px;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    text-align: left;
+    width: 200px;
+
+    &:last-child {
+      width: 90px;
+      text-align: left;
+    }
+  }
 }
