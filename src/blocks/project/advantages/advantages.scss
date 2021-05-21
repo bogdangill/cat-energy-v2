@@ -13,3 +13,23 @@
     padding-top: 70px;
   }
 }
+
+.advantages__row {
+  @include row();
+}
+
+.advantages__col--12 {
+  @include col(xs, 12);
+}
+
+.advantages__col--md-6 {
+  @include col(md, 6);
+}
+
+.advantages__col--xl {
+  @media (min-width: $screen-xl) {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}

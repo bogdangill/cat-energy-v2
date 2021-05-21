@@ -47,7 +47,7 @@
     border-bottom: 1px dashed $grey-darker;
 
     &:hover {
-      cursor: pointer;
+      cursor: default;
       border-bottom-style: solid;
     }
 
@@ -140,7 +140,6 @@
 .slider__control::-ms-track {
   box-sizing: border-box;
   height: 14px;
-  cursor: pointer;
   background: transparent;
   border-color: transparent;
   border-width: 16px 0;

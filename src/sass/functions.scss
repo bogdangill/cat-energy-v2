@@ -44,13 +44,11 @@
   height: $height;
   border-radius: $bRad;
   background-color: $bgColor;
-  cursor: pointer;
 }
 
 @mixin makeTrack($height, $bgColor, $bRad, $bColor, $paddY, $paddX) {
   box-sizing: border-box;
   height: $height;
-  cursor: pointer;
   background: $bgColor;
   border-radius: $bRad;
   border: 1px solid $bColor;

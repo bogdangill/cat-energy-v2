@@ -7,14 +7,12 @@
   @include row();
 }
 
-.goal__col {
-  @include make-col(12);
-  margin-bottom: 25px;
+.goal__col--12 {
+  @include col(xs, 12);
+}
 
-  @media (min-width: $screen-xl) {
-    @include make-col(6);
-    margin-bottom: 0;
-  }
+.goal__col--xl-6 {
+  @include col(xl, 6);
 }
 
 .goal__col:last-child {
