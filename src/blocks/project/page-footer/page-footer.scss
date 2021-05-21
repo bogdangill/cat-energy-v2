@@ -2,6 +2,19 @@
   background-color: #F2F2F2;
 }
 
+.footer__row {
+  @include row();
+  align-items: center;
+}
+
+.footer__col--12 {
+  @include col(xs, 12);
+}
+
+.footer__col--md-4 {
+  @include col(md, 4);
+}
+
 .footer__top--index {
   background-color: #fff;
 }
