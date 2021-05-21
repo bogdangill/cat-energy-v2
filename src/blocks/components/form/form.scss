@@ -150,14 +150,46 @@
   width: 100%;
   padding: 0 1rem;
   border: 1px solid #E7E7E7;
+
+  &:focus, &:disabled {
+    outline: none;
+    border: 2px solid #444;
+  }
+
+  &:invalid {
+    border: 2px solid $color-error;
+
+    + .form__icon--phone {
+      fill: $color-error;
+    }
+
+    + .form__icon--email {
+      stroke: $color-error;
+    }
+  }
+
+  &:disabled {
+
+    + .form__icon--phone {
+      fill: $green-basic;
+    }
+
+    + .form__icon--email {
+      stroke: $green-basic;
+    }
+  }
 }
 
 .form__icon {
-  fill: none;
   position: absolute;
   right: 20px;
   max-height: 40px;
   width: 20px;
+}
+
+.form__icon--email {
+  fill: none;
+  stroke: #444;
 }
 
 .form__custom {
@@ -186,6 +218,11 @@
   color: inherit;
   padding: 10px .8em;
   border: 1px solid #E7E7E7;
+
+  &:focus {
+    outline: none;
+    border: 2px solid #444;
+  }
 }
 
 .form__submit {
