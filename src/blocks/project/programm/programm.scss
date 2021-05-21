@@ -1,0 +1,22 @@
+.programm__intro {
+  @include container();
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    max-width: 630px;
+  }
+}
+
+.programm__title {
+  margin-top: .75em;
+  margin-bottom: 1em;
+}
+
+.programm__text {
+  color: black;
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    font-size: 1.25rem;
+    margin-bottom: 65px;
+  }
+}

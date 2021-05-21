@@ -39,7 +39,6 @@
 .promo__title {
   color: white;
   padding-top: 8.33%;
-  transition: $transition-time;
 
   @media (min-width: $screen-md) {
     color: black;
@@ -53,7 +52,6 @@
 
 .promo__uppertext {
   margin: 7.81% 0;
-  transition: $transition-time;
 }
 
 .promo__image {

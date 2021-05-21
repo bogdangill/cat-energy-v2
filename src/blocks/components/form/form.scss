@@ -1,0 +1,200 @@
+.form {
+  font-size: 1rem;
+}
+
+.form__container {
+  @include container();
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    max-width: 630px;
+  }
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.form__col--md-6 {
+  @include col(md, 6, 12, 0);
+}
+
+.form__col--xl-3 {
+  @include col(xl, 3, 12, 0);
+}
+
+.form__col--xl-6-m-0 {
+  position: relative;
+
+  @media (min-width: $screen-xl) {
+    flex-basis: 48%;
+    margin: 0;
+  }
+}
+
+.form__section:not(:last-child) {
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 90px;
+  }
+}
+
+.form__section--linethrough {
+  position: relative;
+  border-top: 2px solid $green-basic;
+  margin-bottom: 40px;
+}
+
+.form__radiobuttons {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: 25px;
+
+  @media (max-width: $screen-md - 1) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  @media (min-width: $screen-md) {
+    flex-basis: 100%;
+    border-top-color: #E7E7E7;
+    border-bottom-color: #e7e7e7;
+    border-left: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    margin-top: 70px;
+  }
+}
+
+.form__group {
+  display: flex;
+  align-items: center;
+  color: #444444;
+  font-weight: 400;
+  width: 100%;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__group--wrapper {
+  flex-basis: 100%;
+}
+
+.form__group--relative {
+  position: relative;
+}
+
+.form__group--custom {
+  position: relative;
+  height: 30px;
+}
+
+.form__group--submit {
+  margin-top: 35px;
+
+  @media (min-width: $screen-md) {
+    margin-bottom: 0;
+  }
+}
+
+.form__group--hint {
+  justify-content: center;
+
+  @media (min-width: $screen-md) {
+    margin-top: 35px;
+    justify-content: flex-start;
+  }
+}
+
+.form__label {
+  color: inherit;
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.form__label--custom {
+  padding-left: 45px;
+  cursor: pointer;
+  // user-select: none;
+}
+
+.form__label--custom::before {
+  content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+  width: 30px;
+	height: 30px;
+  border: 1px solid #cdcdcd;
+}
+
+.form__label--custom--radio::before {
+  border-radius: 50%;
+}
+
+.form__label--custom:hover::before {
+  border-color: #BABABA;
+}
+
+.form__input {
+  position: relative;
+  color: inherit;
+  height: 45px;
+  width: 100%;
+  padding: 0 1rem;
+  border: 1px solid #E7E7E7;
+}
+
+.form__icon {
+  fill: none;
+  position: absolute;
+  right: 20px;
+  max-height: 40px;
+  width: 20px;
+}
+
+.form__custom {
+  display: none;
+}
+
+.form__custom--radio:checked + .form__label--custom--radio::before {
+	background: radial-gradient(circle, rgba(104,183,56,1) 35%, rgba(255,255,255,1) 35%);
+}
+
+.form__custom--radio:disabled + .form__label--custom--radio {
+  opacity: .3;
+}
+
+.form__custom--checkbox:checked + .form__label--custom--checkbox::before {
+  background-image: url("../img/cat-energy-img/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+}
+
+.form__textarea {
+  resize: vertical;
+  min-height: 150px;
+  width: 100%;
+  color: inherit;
+  padding: 10px .8em;
+  border: 1px solid #E7E7E7;
+}
+
+.form__submit {
+  width: 100%;
+  max-width: 500px;
+
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+    max-width: 230px;
+  }
+}
