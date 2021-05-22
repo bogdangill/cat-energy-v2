@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: $offset-mobile;
+  padding: 7.14%;
   background-color: $grey-basic;
 
   @media (min-width: $screen-md) and (max-width: $screen-xl) {
@@ -34,7 +34,7 @@
 
 .card__icon-container {
   @include makeSqr(50px);
-  margin-right: $offset-mobile;
+  margin-right: 7.14%;
 
   @media (min-width: $screen-md) {
     float: right;
