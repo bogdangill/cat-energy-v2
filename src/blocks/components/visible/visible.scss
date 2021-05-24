@@ -1,0 +1,11 @@
+.visible {
+  transition: $time;
+}
+
+.visible--on {
+  opacity: 1;
+}
+
+.visible--off {
+  opacity: 0;
+}

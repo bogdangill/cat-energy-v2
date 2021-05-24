@@ -7,29 +7,27 @@ import '../blocks/components/dropdown/dropdown.js';
 
 // Если js включен в браузере
 
-var tagHtml = document.querySelector('html');
+let tagHtml = document.querySelector('html');
 tagHtml.classList.add('js');
 
 // скрытие контента в промосекции при показе меню на мобильнике
 
-var burger = document.querySelector('.burger');
+let burger = document.querySelector('.burger');
 
-function hideElements() {
-  var triggeringSection = document.getElementById('trigger');
-  var elemsToHide = triggeringSection.querySelectorAll('*:nth-child(-n+2)');
+burger.addEventListener('click', () => {
+  let switchers = document.querySelectorAll('.visible');
+  
+  for (let switcher of switchers) {
 
-  if (burger.classList.contains('burger--close')) {
-    for (var elemToHide of elemsToHide) {
-      elemToHide.style.opacity = '1';
-    }
-  } else {
-    for (var elemToHide of elemsToHide) {
-      elemToHide.style.opacity= '0';
+    if (switcher.classList.contains('visible--on')) {
+      switcher.classList.add('visible--off');
+      switcher.classList.remove('visible--on');
+    } else {
+      switcher.classList.remove('visible--off');
+      switcher.classList.add('visible--on');
     }
   }
-}
-
-burger.addEventListener('click', hideElements);
+});
 
 // скрытие контента в промосекции при показе меню на мобильнике
 
