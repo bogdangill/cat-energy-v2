@@ -22,6 +22,7 @@ $transition-time:             0.3s !default;
 .main-nav {
 
   $block-name:                &; // #{$block-name}__element
+  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   z-index: 10;
 

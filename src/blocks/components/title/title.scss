@@ -1,0 +1,15 @@
+.title {
+  font-family: 'Oswald', sans-serif;
+  line-height: 1em;
+  font-weight: 400;
+  margin: 0;
+  color: black;
+}
+
+.title--section {
+  font-size: 2.3rem;
+
+  @media (min-width: $screen-md) {
+      font-size: 3.75rem;
+  }
+}

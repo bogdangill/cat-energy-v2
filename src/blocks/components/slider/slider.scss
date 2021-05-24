@@ -58,13 +58,14 @@
 }
 
 .slider__control {
+  width: 85px;
   margin: 0 12px;
 
   @media (min-width: $screen-md) {
+    width: 430px;
     margin: 0 24px;
   }
 }
-    // стили для ползунка контрола
 
 .slider__control::-webkit-slider-thumb {
   -webkit-appearance: none;

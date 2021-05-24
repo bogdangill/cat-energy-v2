@@ -8,9 +8,9 @@ block content
   main
     section.promo
       .promo__content-wrapper
-        .promo__content(id='trigger')
-          h1.title.promo__title.title--section Функциональное питание для котов
-          p.uppertext.promo__uppertext Занялся собой? Займись котом!
+        .promo__content
+          h1.title.promo__title.title--section.visible.visible--on Функциональное питание для котов
+          p.uppertext.promo__uppertext.visible.visible--on Занялся собой? Займись котом!
           img.promo__image(src='img/cat-energy-img/index-can.png' alt='продукция cat energy pro курица')
           a.link.btn.btn--primary.promo__btn(href="/program.html") подобрать программу
       .promo__background
@@ -49,7 +49,7 @@ block content
       .demonstration__wrapper
         .demonstration__description
           h2.title.demonstration__title.title--section Живой пример
-          p.text.demonstration__text 
+          p.demonstration__text 
             | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
             | обычный корм на Cat Energy Slim. Отличный результат 
             | без изнуряющих тренировок! При этом он не менял своих 
@@ -60,10 +60,10 @@ block content
                 .numbers__cards
                   fieldset.numbers__item
                     span.uppertext.numbers__number 5 КГ
-                    legend.text.numbers__text снижение веса
+                    legend.numbers__text снижение веса
                   fieldset.numbers__item
                     span.uppertext.numbers__number 60 ДНЕЙ
-                    legend.text.numbers__text затрачено времени
+                    legend.numbers__text затрачено времени
               .numbers__col--12.numbers__col--md-6.numbers__col--xl-12
                 .numbers__expenses-container
                   span.uppertext.numbers__uppertext Затраты на питание: 

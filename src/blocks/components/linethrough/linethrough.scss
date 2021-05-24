@@ -1,0 +1,37 @@
+.linethrough {
+  @include row();
+  margin-bottom: 40px;
+
+  @media (min-width: $screen-md) {
+      margin-bottom: 90px;
+      flex-basis: 100%;
+  }
+}
+
+.linethrough--ml-0 {
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
+      margin-left: 0;
+  }
+}
+
+.linethrough--mb-70px {
+  @media (max-width: $screen-md) {
+      margin-bottom: 70px;
+  }
+}
+
+.linethrough__title {
+  position: absolute;
+  top: -.7em;
+  width: auto;
+  max-width: 230px;
+  font-size: 1.5rem;
+  line-height: 1.08em;
+  background-color: #fff;
+  padding: 0 20px;
+
+  @media (min-width: $screen-md) {
+      font-size: 2.25rem;
+      max-width: 100%;
+  }
+}

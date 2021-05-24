@@ -1,4 +1,12 @@
-// Style plagin
+/*
+ 
+ _ _  _ ___  ____ ____ ___    ___  ____ ____ _ ____ ____ 
+ | |\/| |__] |  | |__/  |     |__] |__| [__  | |    [__  
+ | |  | |    |__| |  \  |     |__] |  | ___] | |___ ___] 
+                                                         
+ 
+*/
+
 @import "variables";
 
 @import "grid-mixins";
@@ -8,115 +16,22 @@
 @import "fonts";
 @import "global";
 
-// ========================== BASIC STYLES =============================== //
+/*
+ 
+ _ _  _ ___  ____ ____ ___    ____ ____ _  _ ___  ____ _  _ ____ _  _ ___ ____ 
+ | |\/| |__] |  | |__/  |     |    |  | |\/| |__] |  | |\ | |___ |\ |  |  [__  
+ | |  | |    |__| |  \  |     |___ |__| |  | |    |__| | \| |___ | \|  |  ___] 
+                                                                               
+ 
+*/
 
-
-
-.visually-hidden:not(:focus):not(:active) {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-.title {
-    line-height: 1em;
-    font-weight: 400;
-    margin: 0;
-    color: black;
-}
-
-.title--section {
-    font-size: 2.3rem;
-
-    @media (min-width: $screen-md) {
-        font-size: 3.75rem;
-    }
-}
-
-.text {
-    font-family: 'Arial';
-}
-
-.uppertext {
-    text-transform: uppercase;
-}
-
-#trigger > * {
-    transition: $time;
-}
-
-input[type='range'] {
-    width: 85px;
-
-    @media (min-width: $screen-md) {
-        width: 430px;
-    }
-}
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.wrapper__inner {
-    flex: 1 0 auto;
-}
-
-.social {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.linethrough {
-    @include row();
-    margin-bottom: 40px;
-
-    @media (min-width: $screen-md) {
-        margin-bottom: 90px;
-        flex-basis: 100%;
-    }
-}
-
-.linethrough--ml-0 {
-    @media (min-width: $screen-md) and (max-width: $screen-xl) {
-        margin-left: 0;
-    }
-}
-
-.linethrough--mb-70px {
-    @media (max-width: $screen-md) {
-        margin-bottom: 70px;
-    }
-}
-
-.linethrough__title {
-    position: absolute;
-    top: -.7em;
-    width: auto;
-    max-width: 230px;
-    font-size: 1.5rem;
-    line-height: 1.08em;
-    background-color: #fff;
-    padding: 0 20px;
-
-    @media (min-width: $screen-md) {
-        font-size: 2.25rem;
-        max-width: 100%;
-    }
-}
-
+@import "../blocks/components/visually-hidden/visually-hidden.scss";
+@import "../blocks/components/title/title.scss";
+@import "../blocks/components/uppertext/uppertext.scss";
+@import "../blocks/components/wrapper/wrapper.scss";
+@import "../blocks/components/visible/visible.scss";
+@import "../blocks/components/linethrough/linethrough.scss";
+@import "../blocks/components/social/social.scss";
 @import "../blocks/components/logo/logo.scss";
 @import "../blocks/components/btn/btn.scss";
 @import "../blocks/components/burger/burger.scss";
@@ -135,6 +50,15 @@ input[type='range'] {
 @import "../blocks/components/table/table.scss";
 @import "../blocks/components/banner/banner.scss";
 @import "../blocks/components/form/form.scss";
+
+/*
+ 
+ _ _  _ ___  ____ ____ ___    _    ____ ____ ____ ____    ____ ____ _  _ ___  ____ _  _ ____ _  _ ___ ____ 
+ | |\/| |__] |  | |__/  |     |    |__| |__/ | __ |___    |    |  | |\/| |__] |  | |\ | |___ |\ |  |  [__  
+ | |  | |    |__| |  \  |     |___ |  | |  \ |__] |___    |___ |__| |  | |    |__| | \| |___ | \|  |  ___] 
+                                                                                                           
+ 
+*/
 
 @import "../blocks/project/page-header/page-header";
 @import "../blocks/project/promo/promo.scss";
