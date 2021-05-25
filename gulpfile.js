@@ -20,7 +20,8 @@ const svgmin = require('gulp-svgmin'); // свг минификация
 //var run = require('run-sequence'); //запуск плагинов очередью
 const del = require('del'); //удаление ненужных файлов
 //var concat = require('gulp-concat'); // Конкатинация
-const uglify = require('gulp-uglify'); // минификация js
+// const uglify = require('gulp-uglify'); // минификация js <<deprecated
+const uglify = require('gulp-uglify-es').default; //<старое говно, но работает
 // pug
 const atImport = require('postcss-import'); // Импорт стороним плагином чтоб избежать ошибки
 const csscomb = require('gulp-csscomb'); // Красота Css
