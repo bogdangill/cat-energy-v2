@@ -1,0 +1,13 @@
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+  width: 100%;
+  color: #444444;;
+  padding: 10px .8em;
+  border: 1px solid #E7E7E7;
+
+  &:focus {
+    border: 1px solid transparent;
+    outline: 2px solid #444;
+  }
+}

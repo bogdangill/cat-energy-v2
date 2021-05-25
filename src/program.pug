@@ -13,40 +13,40 @@ block content
       form.form.programm__form(action="#" method="POST")
         fieldset.form__section
           .form__container
-            .form__group--wrapper.form__col--xl-6-m-0
-              .form__group
-                label(for="name" class="form__label uppertext") ИМЯ:*
-                input(type="text" id="name" class="form__input uppertext" placeholder="БАРСИК" required)
-              .form__group
-                label(for="weight" class="form__label uppertext") Вес (кг):*
-                input(type="number" id="weight" class="form__input uppertext" placeholder="7" required)
-              .form__group
-                label(for="age" class="form__label uppertext") Возраст (лет):
-                input(type="number" id="age" class="form__input uppertext" placeholder="7")
+            .form__group.form__col--xl-6-m-0
+              label.input-box.form__input-box.uppertext
+                span(class="input-box__name") ИМЯ:*
+                input(type="text" class="input-box__input" placeholder="БАРСИК" required)
+              label.input-box.form__input-box.uppertext
+                span(class="input-box__name") Вес (кг):*
+                input(type="number" class="input-box__input" placeholder="7" required)
+              label.input-box.form__input-box.uppertext
+                span(class="input-box__name") Возраст (лет):
+                input(type="number" class="input-box__input" placeholder="7")
             .form__radiobuttons.form__col--xl-6-m-0
-              .form__group.form__group--custom
-                input(type="radio" id="diet" class="form__custom form__custom--radio" name="choice" value="diet" checked)
-                label(for="diet" class="form__label form__label--custom form__label--custom--radio uppertext") похудение
-              .form__group.form__group--custom
-                input(type="radio" id="mass" class="form__custom form__custom--radio" name="choice" value="mass")
-                label(for="mass" class="form__label form__label--custom form__label--custom--radio uppertext") Набор массы
-              .form__group.form__group--custom
-                input(type="radio" id="idk" class="form__custom form__custom--radio" name="choice" value="idk")
-                label(for="idk" class="form__label form__label--custom form__label--custom--radio uppertext") Не знаю (Нужен ваш совет)
+              label.input-box.form__input-box.input-box--custom.uppertext
+                input(type="radio" class="input-box__input--custom input-box__input--custom--radio" name="choice" value="diet" checked)
+                span(class="input-box__name input-box__name--custom input-box__name--custom--radio") похудение
+              label.input-box.form__input-box.input-box--custom.uppertext
+                input(type="radio" class="input-box__input--custom input-box__input--custom--radio" name="choice" value="mass")
+                span(class="input-box__name input-box__name--custom input-box__name--custom--radio") Набор массы
+              label.input-box.form__input-box.input-box--custom.uppertext
+                input(type="radio" class="input-box__input--custom input-box__input--custom--radio" name="choice" value="idk")
+                span(class="input-box__name input-box__name--custom input-box__name--custom--radio") Не знаю (Нужен ваш совет)
         fieldset.form__section.form__section--linethrough
           .form__container
             .linethrough.linethrough--mb-70px
               legend.title.linethrough__title Контактные данные (владельца кота)
-            .form__group.form__group--relative.form__col--xl-6-m-0
-              label(for="mail" class="form__label uppertext") E-mail:*
-              input(type="email" id="mail" class="form__input uppertext" name="email" placeholder="kuklachev@gmail.com" required)
-              <svg class="form__icon form__icon--email" width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
+            label.input-box.form__input-box.uppertext.form__col--xl-6-m-0
+              span(class="input-box__name") E-mail:*
+              input(type="email" class="input-box__input" name="email" placeholder="kuklachev@gmail.com" required)
+              <svg class="input-box__icon input-box__icon--email" width="20" height="15" viewBox="0 0 20 15" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 5.875V14H19V5.875M1 1V2.625L10 9.66667L19 2.625V1H1Z"/>
               </svg>
-            .form__group.form__group--relative.form__col--xl-6-m-0
-              label(for="tel" class="form__label uppertext") Телефон:*
-              input(type="tel" id="tel" class="form__input form__input--phone uppertext" name="phone" placeholder="8 (960) 900-60-90" required)
-              <svg class="form__icon form__icon--phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+            label.input-box.form__input-box.uppertext.form__col--xl-6-m-0
+              span(class="input-box__name") Телефон:*
+              input(type="tel" class="input-box__input" name="phone" placeholder="8 (960) 900-60-90" required)
+              <svg class="input-box__icon input-box__icon--phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                 <g clip-path="url(#clip0)">
                   <path d="M17.9 9.753H9.4v1.204h8.5l-2.1 2.107.9.903 3.1-3.11a.754.754 0 000-.904l-3.1-3.11-.9.903 2.1 2.007zM8.1 19.787v-6.221a.653.653 0 00-.6-.602H3.1a1.226 1.226 0 001.2 1.204h2.5v5.017H3.1a1.784 1.784 0 01-1.728-1.02 1.801 1.801 0 01-.172-.686V3.431a1.78 1.78 0 01.483-1.25A1.767 1.767 0 012.9 1.624h3.9v5.017H4.4a1.218 1.218 0 00-1.2 1.204h4.4a.649.649 0 00.6-.602V.923A.863.863 0 007.5.32H3.1a2.99 2.99 0 00-2.151.81A3.01 3.01 0 000 3.23v13.948a2.91 2.91 0 00.772 2.192 2.89 2.89 0 002.128.919h4.6a.499.499 0 00.6-.502z"/>
                 </g>
@@ -60,24 +60,23 @@ block content
           .form__container
             .linethrough
               legend.title.linethrough__title Комментарий
-            .form__group
-              textarea(class="form__textarea uppertext" name="comment", cols="50", rows="5" placeholder="Расскажите обо всех повАдках кота")
+            textarea(class="textarea uppertext" name="comment", cols="50", rows="5" placeholder="Расскажите обо всех повАдках кота")
         fieldset.form__section.form__section--linethrough
           .form__container
             .linethrough
               legend.title.linethrough__title Дополнительно
-            .form__group.form__group--custom.form__col--md-6.form__col--xl-3
-              input(type="checkbox" id="sweetfield" class="form__custom form__custom--checkbox" name="sweet" checked)
-              label(for="sweetfield" class="form__label form__label--custom form__label--custom--checkbox uppertext") сахарозаменитель
-            .form__group.form__group--custom.form__col--md-6.form__col--xl-3
-              input(type="checkbox" id="waterfield" class="form__custom form__custom--checkbox" name="water")
-              label(for="waterfield" class="form__label form__label--custom form__label--custom--checkbox uppertext") питьевая вода
-            .form__group.form__group--custom.form__col--md-6.form__col--xl-3
-              input(type="checkbox" id="milkfield" class="form__custom form__custom--checkbox" name="milk")
-              label(for="milkfield" class="form__label form__label--custom form__label--custom--checkbox uppertext") молоко
-            .form__group.form__group--custom.form__col--md-6.form__col--xl-3
-              input(type="checkbox" id="vitafield" class="form__custom form__custom--checkbox" name="vitamin")
-              label(for="vitafield" class="form__label form__label--custom form__label--custom--checkbox uppertext") витамины
+            label.input-box.form__input-box.input-box--custom.uppertext.form__col--md-6.form__col--xl-3
+              input(type="checkbox" class="input-box__input--custom input-box__input--custom--checkbox" name="sweet" checked)
+              span(class="input-box__name input-box__name--custom input-box__name--custom--checkbox") сахарозаменитель
+            label.input-box.form__input-box.input-box--custom.uppertext.form__col--md-6.form__col--xl-3
+              input(type="checkbox" class="input-box__input--custom input-box__input--custom--checkbox" name="water")
+              span(class="input-box__name input-box__name--custom input-box__name--custom--checkbox") питьевая вода
+            label.input-box.form__input-box.input-box--custom.uppertext.form__col--md-6.form__col--xl-3
+              input(type="checkbox" class="input-box__input--custom input-box__input--custom--checkbox" name="milk")
+              span(class="input-box__name input-box__name--custom input-box__name--custom--checkbox") молоко
+            label.input-box.form__input-box.input-box--custom.uppertext.form__col--md-6.form__col--xl-3
+              input(type="checkbox" class="input-box__input--custom input-box__input--custom--checkbox" name="vitamin")
+              span(class="input-box__name input-box__name--custom input-box__name--custom--checkbox") витамины
             .form__group.form__group--submit.form__col--md-6
               button(type="submit" class="btn form__submit btn--primary") отправить заявку
             .form__group.form__group--hint.form__col--md-6
