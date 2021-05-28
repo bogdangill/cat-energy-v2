@@ -28,6 +28,7 @@ const csscomb = require('gulp-csscomb'); // Красота Css
 const prettyHtml = require('gulp-pretty-html'); // Красота HTML
 const tinify = require('gulp-tinypng'); // Сжатие изображения
 const rollup = require('gulp-better-rollup');
+// const babel = require('gulp-babel');
 const babel = require('rollup-plugin-babel');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
@@ -91,7 +92,10 @@ const pug2html = () => {
 
 const scripts = () => {
   return gulp.src(dirs.source + '/js/*.js')
-    .pipe(rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd'))
+    .pipe(rollup({ plugins: [commonjs(), resolve(), babel({runtimeHelpers: true})] }, 
+    {
+      format: "iife"
+    }))
     .pipe(plumber())
     .pipe(gulp.dest(dirs.build + '/js'))
     .pipe(uglify())
