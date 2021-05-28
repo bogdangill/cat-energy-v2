@@ -8,7 +8,7 @@ block content
   main
     section.promo
       .promo__content-wrapper
-        .promo__content
+        .promo__content.container
           h1.title.promo__title.title--section.visible.visible--on Функциональное питание для котов
           p.uppertext.promo__uppertext.visible.visible--on Занялся собой? Займись котом!
           img.promo__image(src='img/cat-energy-img/index-can.png' alt='продукция cat energy pro курица')
@@ -16,68 +16,71 @@ block content
       .promo__background
         .promo__bg-image
     section.goal
-      h2.title.visually-hidden Цель
-      ul.list.goal__row
-        li.list__item.goal__col--12.goal__col--xl-6
-          +card({
-            iconClass: "icon-container__icon--slim",
-            img: "img/cat-energy-img/cat-slim.svg",
-            caption: "худая кошка",
-            title: "похудение",
-            description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
-            url: "/catalog.html",
-            linkText: "каталог slim"
-          })
-        li.list__item.goal__col--12.goal__col--xl-6
-          +card({
-            iconClass: "icon-container__icon--pro",
-            img: "img/cat-energy-img/cat-pro.svg",
-            caption: "раскачанная кошка",
-            title: "набор массы",
-            description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
-            url: "/catalog.html",
-            linkText: "каталог pro"
-          })
+      .container
+        h2.title.visually-hidden Цель
+        ul.list.goal__row
+          li.list__item.goal__col--12.goal__col--xl-6
+            +card({
+              iconClass: "icon-container__icon--slim",
+              img: "img/cat-energy-img/cat-slim.svg",
+              caption: "худая кошка",
+              title: "похудение",
+              description: "Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.",
+              url: "/catalog.html",
+              linkText: "каталог slim"
+            })
+          li.list__item.goal__col--12.goal__col--xl-6
+            +card({
+              iconClass: "icon-container__icon--pro",
+              img: "img/cat-energy-img/cat-pro.svg",
+              caption: "раскачанная кошка",
+              title: "набор массы",
+              description: "Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!",
+              url: "/catalog.html",
+              linkText: "каталог pro"
+            })
     section.advantages
-      h2.title.advantages__title.title--section Как это работает
-      ol.list.advantages__row
-        include blocks/components/advantage/advantage.data.pug
-        each item in advantageData
-          li.list__item.list__item--counter.advantages__col--12.advantages__col--md-6.advantages__col--xl
-            +advantage(item.icon_class, item.description)
+      .container
+        h2.title.advantages__title.title--section Как это работает
+        ol.list.advantages__row
+          include blocks/components/advantage/advantage.data.pug
+          each item in advantageData
+            li.list__item.list__item--counter.advantages__col--12.advantages__col--md-6.advantages__col--xl
+              +advantage(item.icon_class, item.description)
     section.demonstration
-      .demonstration__wrapper
-        .demonstration__description
-          h2.title.demonstration__title.title--section Живой пример
-          p.demonstration__text 
-            | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
-            | обычный корм на Cat Energy Slim. Отличный результат 
-            | без изнуряющих тренировок! При этом он не менял своих 
-            | привычек и по-прежнему спит по 16 часов в день.
-          .numbers.demonstration__numbers
-            .numbers__row
-              .numbers__col--12.numbers__col--md-6.numbers__col--xl-12
-                .numbers__cards
-                  fieldset.numbers__item
-                    span.uppertext.numbers__number 5 КГ
-                    legend.numbers__text снижение веса
-                  fieldset.numbers__item
-                    span.uppertext.numbers__number 60 ДНЕЙ
-                    legend.numbers__text затрачено времени
-              .numbers__col--12.numbers__col--md-6.numbers__col--xl-12
-                .numbers__expenses-container
-                  span.uppertext.numbers__uppertext Затраты на питание: 
-                  span.uppertext.numbers__uppertext 15 000 РУБ. 
-        .demonstration__interactive
-          .slider
-            .slider__inner
-              .slider__slide-wrapper.slider__slide-wrapper--left-side
-                .slider__slide.slider__slide--left
-              .slider__slide-wrapper.slider__slide-wrapper--right-side
-                .slider__slide.slider__slide--right
-            .slider__control-box
-              span.uppertext.slider__control-text(data-state="after") стало
-              input.slider__control(type="range" min="0" max="100" value="50" step="1")
-              span.uppertext.slider__control-text(data-state="before") было
+      .container
+        .demonstration__wrapper
+          .demonstration__description
+            h2.title.demonstration__title.title--section Живой пример
+            p.demonstration__text 
+              | Борис сбросил 5 кг за 2 месяца, просто заменив свой 
+              | обычный корм на Cat Energy Slim. Отличный результат 
+              | без изнуряющих тренировок! При этом он не менял своих 
+              | привычек и по-прежнему спит по 16 часов в день.
+            .numbers.demonstration__numbers
+              .numbers__row
+                .numbers__col--12.numbers__col--md-6.numbers__col--xl-12
+                  .numbers__cards
+                    fieldset.numbers__item
+                      span.uppertext.numbers__number 5 КГ
+                      legend.numbers__text снижение веса
+                    fieldset.numbers__item
+                      span.uppertext.numbers__number 60 ДНЕЙ
+                      legend.numbers__text затрачено времени
+                .numbers__col--12.numbers__col--md-6.numbers__col--xl-12
+                  .numbers__expenses-container
+                    span.uppertext.numbers__uppertext Затраты на питание: 
+                    span.uppertext.numbers__uppertext 15 000 РУБ. 
+          .demonstration__interactive
+            .slider
+              .slider__inner
+                .slider__slide-wrapper.slider__slide-wrapper--left-side
+                  .slider__slide.slider__slide--left
+                .slider__slide-wrapper.slider__slide-wrapper--right-side
+                  .slider__slide.slider__slide--right
+              .slider__control-box
+                span.uppertext.slider__control-text(data-state="after") стало
+                input.slider__control(type="range" min="0" max="100" value="50" step="1")
+                span.uppertext.slider__control-text(data-state="before") было
 block footer
   +page-footer("index")

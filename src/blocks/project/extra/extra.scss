@@ -4,9 +4,7 @@
   margin-top: 2.8em;
 }
 
-.extra__container {
-  @include container();
-
+.extra__inner {
   @media (min-width: $screen-xl) {
     display: flex;
     flex-wrap: wrap;
@@ -15,32 +13,11 @@
   }
 }
 
-.extra__row {
-  @include row();
-  flex-basis: 100%;
-
-  @media (min-width: $screen-md) and (max-width: $screen-xl) {
-    margin-left: 0;
-  }
-}
-
-.extra__title {
-  position: absolute;
-  top: -.7em;
-  font-size: 1.7rem;
-  background-color: #fff;
-  padding: 0 20px;
-
-  @media (min-width: $screen-md) {
-    font-size: 2.25rem;
-  }
-}
-
 .extra__list {
   flex-basis: 74%;
 
-  @media (max-width: $screen-xl) {
-    margin-top: 2.8em;
+  @media (min-width: $screen-xl) {
+    margin-bottom: 90px;
   }
 }
 
@@ -58,16 +35,17 @@
 }
 
 .extra__banner {
-  margin-top: 40px;
-  margin-bottom: 35px;
+  @media (max-width: $screen-md - 1) {
+    margin-top: 40px;
+    margin-bottom: 35px;
+  }
 
-  @media (min-width: $screen-md) {
+  @media (min-width: $screen-md) and (max-width: $screen-xl) {
     margin-top: 70px;
     margin-bottom: 75px;
   }
 
   @media (min-width: $screen-xl) {
-    margin-top: 90px;
     margin-bottom: 90px;
   }
 }

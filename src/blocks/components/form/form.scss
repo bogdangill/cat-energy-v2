@@ -2,11 +2,10 @@
   font-size: 1rem;
 }
 
-.form__container {
-  @include container();
-
+.form__inner {
   @media (min-width: $screen-md) and (max-width: $screen-xl) {
     max-width: 630px;
+    margin: 0 auto;
   }
 
   @media (min-width: $screen-md) {
@@ -80,7 +79,7 @@
   }
 }
 
-.form__group--wrapper {
+.form__group {
   flex-basis: 100%;
 }
 

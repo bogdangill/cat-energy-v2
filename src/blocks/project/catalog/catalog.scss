@@ -1,15 +1,3 @@
-.catalog {
-  @media (min-width: $screen-md) {
-    @include container();
-  }
-}
-
-.catalog__container {
-  @media (max-width: $screen-md - 1) {
-    @include container();
-  }
-}
-
 .catalog__title {
   margin-top: .75em;
   margin-bottom: 1em;
@@ -23,6 +11,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $screen-md - 1) {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 .catalog__good {

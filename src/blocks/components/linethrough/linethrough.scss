@@ -24,7 +24,6 @@
   position: absolute;
   top: -.7em;
   width: auto;
-  max-width: 230px;
   font-size: 1.5rem;
   line-height: 1.08em;
   background-color: #fff;
@@ -34,4 +33,8 @@
       font-size: 2.25rem;
       max-width: 100%;
   }
+}
+
+.linethrough__title--narrow {
+  max-width: 230px;
 }

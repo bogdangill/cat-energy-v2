@@ -20,8 +20,6 @@
 }
 
 .footer__bottom {
-  @include container();
-
   @media (min-width: $screen-md) {
     padding-top: 60px;
     padding-bottom: 60px;

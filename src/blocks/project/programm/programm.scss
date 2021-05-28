@@ -1,8 +1,7 @@
 .programm__intro {
-  @include container();
-
   @media (min-width: $screen-md) and (max-width: $screen-xl) {
     max-width: 630px;
+    margin: 0 auto;
   }
 }
 

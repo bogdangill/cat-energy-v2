@@ -5,7 +5,8 @@
     @include row(0,0,0,0,0,0);
     
     @media (max-width: $screen-md - 1) {
-      @include container();
+      padding-left: 20px;
+      padding-right: 20px;
       display: flex;
       border-top: 1px solid #EBEBEB;
     }
@@ -21,7 +22,8 @@
 
   &--more {
     @media (max-width: $screen-md - 1) {
-      @include container();
+      padding-left: 20px;
+      padding-right: 20px;
       border-top: 1px solid #EBEBEB;
       border-bottom: 1px solid #EBEBEB;
     }

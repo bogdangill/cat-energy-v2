@@ -1,8 +1,9 @@
 mixin page-header(modifier = "default", id)
   header(class="header header--"+ modifier +"")
-    .header__inner
-      a.logo(href="/")
-        .logo__icon
-      img.logo__text(src="img/cat-energy-img/logo-mobile-text.svg" alt="cat energy logo")
-      block main-nav
-        +main-nav(id, modifier)
+    .container
+      .header__inner
+        a.logo(href="/")
+          .logo__icon
+        img.logo__text(src="img/cat-energy-img/logo-mobile-text.svg" alt="cat energy logo")
+        block main-nav
+          +main-nav(id, modifier)
