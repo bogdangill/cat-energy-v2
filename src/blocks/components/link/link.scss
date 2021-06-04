@@ -10,7 +10,7 @@
 .link__icon--arrow {
   width: 2.5em;
   height: 1em;
-  background-image: url('../img/cat-energy-img/icon_arrow.svg');
+  background-image: url('../img/decor/icon_arrow.svg');
   background-repeat: no-repeat;
   background-position: -70% 50%;
 }
@@ -19,10 +19,44 @@
   transition: $time;
 }
 
+.link__icon--social {
+  fill: #666;
+  height: 22px;
+}
+
+.link__icon--vk {
+  width: 23px;
+
+  @media (min-width: $screen-md) {
+    width: 30px;
+  }
+}
+
+.link__icon--ins {
+  width: 16px;
+
+  @media (min-width: $screen-md) {
+    width: 23px;
+  }
+}
+
+.link__icon--fb {
+  width: 22px;
+
+  @media (min-width: $screen-md) {
+    width: 28px;
+  }
+}
+
+.link__icon--html {
+  width: 27px;
+  height: 34px;
+}
+
 .link:hover .link__icon--arrow {
   background-position: 20% 50%;
 }
 
-.link:hover .link__icon--socials {
+.link:hover .link__icon--social {
   fill: $green-basic;
 }

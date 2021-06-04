@@ -1,25 +1,26 @@
-.map {
-  @include makeBgCenter(cover);
-  background-position: center;
+.map-wrapper {
+  position: relative;
   width: 100%;
   height: 113.13vw;
   max-height: 400px;
-  background-image: url('../img/cat-energy-img/map.png');
-
-  @media (min-width: $screen-xl) {
-    background-image: url('../img/cat-energy-img/mapxl.png');
-  }
 }
 
-.map__inner {
+.map-wrapper__map {
+  position: absolute;
+}
+
+.map-wrapper__inner {
+  position: relative;
+  // top: 0;
   @include container();
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 100%;
+  z-index: 5;
 }
 
-.map__contacts {
+.map-wrapper__contacts {
   background-color: #fff;
   width: 570px;
   

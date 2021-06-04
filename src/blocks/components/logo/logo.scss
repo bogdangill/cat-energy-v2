@@ -13,16 +13,16 @@
   display: inline-block;
   height: 2.85em;
   width: 2.42em;
-  background-image: url('../img/cat-energy-img/logo-mobile.svg');
+  background-image: url('../img/content/logo-mobile.svg');
   @include makeBgCenter(contain);
 
   @media(min-width: $screen-md) {
     width: 10em;
-    background-image: url('../img/cat-energy-img/logo-tablet.svg');
+    background-image: url('../img/content/logo-tablet.svg');
   }
 
   @media(min-width: $screen-lg) {
-    background-image: url('../img/cat-energy-img/logo-desktop.svg');
+    background-image: url('../img/content/logo-desktop.svg');
   }
 }
 

@@ -5,7 +5,7 @@
   align-items: center;
   height: 290px;
   color: white;
-  background-image: url("../img/cat-energy-img/gift.png");
+  background-image: url("../img/content/gift.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,6 +21,7 @@
 }
 
 .banner__icon {
+  max-width: 80px;
   flex-basis: 100%;
 
   @media (min-width: $screen-md - 1) and (max-width: $screen-xl) {
