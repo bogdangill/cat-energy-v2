@@ -16,7 +16,7 @@ const minify = require('gulp-csso'); //минификация css
 const rename = require('gulp-rename'); // перемейноввывние имя css
 const imagemin = require('gulp-imagemin'); // ужимаем изображение
 const svgstore = require('gulp-svgstore'); // собиральщик cvg
-const svgmin = require('gulp-svgmin'); // свг минификация
+// const svgmin = require('gulp-svgmin'); // свг минификация
 //var run = require('run-sequence'); //запуск плагинов очередью
 const del = require('del'); //удаление ненужных файлов
 //var concat = require('gulp-concat'); // Конкатинация
@@ -116,7 +116,7 @@ const images = () => {
 const symbols = () => {
   return gulp.src(dirs.source + '/img/sprite/*.svg')
     .pipe(plumber())
-    .pipe(svgmin())
+    // .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
